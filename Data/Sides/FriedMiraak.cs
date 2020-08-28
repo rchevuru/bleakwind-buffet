@@ -8,14 +8,23 @@ namespace BleakwindBuffet.Data.Sides
 {
     class FriedMiraak
     {
+        /// <summary>
+        /// varible to get size from enum
+        /// </summary>
         private Size size = Size.Small;
 
+        /// <summary>
+        /// gets and sets size
+        /// </summary>
         public Size Size
         {
             get => size;
             set => size = value;
         }
 
+        /// <summary>
+        /// Gets the price of the pancake 
+        /// </summary>
         public double Price
         {
             get
@@ -31,6 +40,9 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        /// <summary>
+        /// Gets the calories of the pancake 
+        /// </summary>
         public uint Calories
         {
             get
@@ -46,6 +58,9 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        /// <summary>
+        /// Prints any special instructions
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -55,6 +70,10 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        /// <summary>
+        /// Prints the size and name
+        /// </summary>
+        /// <returns>string</returns>
         public override string ToString()
         {
             return size.ToString() + " Fried Miraak";

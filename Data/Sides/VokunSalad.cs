@@ -9,14 +9,23 @@ namespace BleakwindBuffet.Data.Sides
 {
     public class VokunSalad
     {
+        /// <summary>
+        /// varible to get size from enum
+        /// </summary>
         private Size size = Size.Small; 
         
+        /// <summary>
+        /// gets and sets size
+        /// </summary>
         public Size Size
         {
             get => size;
             set => size = value; 
         }
 
+        /// <summary>
+        /// Gets the price of the salad
+        /// </summary>
         public double Price
         {
             get
@@ -32,6 +41,9 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        /// <summary>
+        /// Gets the calories of the salad
+        /// </summary>
         public uint Calories
         {
             get

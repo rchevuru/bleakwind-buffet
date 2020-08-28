@@ -7,8 +7,14 @@ namespace BleakwindBuffet.Data.Sides
 {
     public class DragonbornWaffleFries
     {
+        /// <summary>
+        /// varible to get size from enum
+        /// </summary>
         private Size size = Size.Small;
 
+        /// <summary>
+        /// gets and sets size
+        /// </summary>
         public Size Size
         {
             get => size;
