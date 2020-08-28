@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru 
+ * Class name: FriedMiraak.cs
+ * Purpose: Class used to show price and calories with sizes for sides 
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
@@ -6,6 +11,9 @@ using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data.Sides
 {
+    /// <summary>
+    /// Class used to show price and calories with sizes for sides 
+    /// </summary>
     class FriedMiraak
     {
         /// <summary>

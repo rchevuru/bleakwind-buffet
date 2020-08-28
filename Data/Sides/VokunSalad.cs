@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru 
+ * Class name: VokunSalad.cs
+ * Purpose: Class used to show price and calories with sizes for sides 
+ */
+using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
@@ -7,6 +12,9 @@ using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data.Sides
 {
+    /// <summary>
+    /// Class used to show price and calories with sizes for sides 
+    /// </summary>
     public class VokunSalad
     {
         /// <summary>

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru 
+ * Class name: CandlehearthCoffee.cs
+ * Purpose: Class used to show price and calories with sizes for drinks 
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
@@ -6,37 +11,70 @@ using BleakwindBuffet.Data.Enums;
 
 namespace Data.Drinks
 {
+    /// <summary>
+    /// Class used to show price and calories with sizes for drinks 
+    /// </summary>
     public class CandlehearthCoffee
     {
+        /// <summary>
+        /// Private varible that will called for Ice 
+        /// </summary>
         private bool ice = false;
+
+        /// <summary>
+        ///  Private varible that will called for Decaf 
+        /// </summary>
         private bool decaf = false;
+
+        /// <summary>
+        ///  Private varible that will called for RoomForCream 
+        /// </summary>
         private bool roomForCream = false;
+
+        /// <summary>
+        /// varible to get size from enum
+        /// </summary>
         private Size size = Size.Small;
 
+        /// <summary>
+        /// Gets and sets ice
+        /// </summary>
         public bool Ice
         {
             get => ice;
             set => ice = value;
         }
 
+        /// <summary>
+        /// gets and sets size
+        /// </summary>
         public Size Size
         {
             get => size;
             set => size = value;
         }
 
+        /// <summary>
+        /// Gets and sets decaf
+        /// </summary>
         public bool Decaf
         {
             get => decaf;
             set => decaf = value;
         }
 
+        /// <summary>
+        /// gets ans sets decaf
+        /// </summary>
         public bool RoomForCream
         {
             get => roomForCream;
             set => roomForCream = value;
         }
 
+        /// <summary>
+        /// Gets the price of water
+        /// </summary>
         public double Price
         {
             get
@@ -52,6 +90,9 @@ namespace Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Gets the calories of water
+        /// </summary>
         public uint Calories
         {
             get
@@ -67,6 +108,9 @@ namespace Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Prints any special instructions
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -78,6 +122,10 @@ namespace Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Prints the size,name, and if it's decafed
+        /// </summary>
+        /// <returns>string</returns>
         public override string ToString()
         {
             if (!Decaf)

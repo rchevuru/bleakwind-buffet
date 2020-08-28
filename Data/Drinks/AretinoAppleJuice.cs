@@ -1,27 +1,51 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru 
+ * Class name: AretinoAppleJuice.cs
+ * Purpose: Class used to show price and calories with sizes for drinks 
+ */
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data.Drinks
 {
+    /// <summary>
+    /// Class used to show price and calories with sizes for drinks 
+    /// </summary>
     public class AretinoAppleJuice
     {
+        /// <summary>
+        /// Private varible that will called for Ice 
+        /// </summary>
         private bool ice = true;
-        private Size size = Size.Small; 
 
+        /// <summary>
+        /// varible to get size from enum
+        /// </summary>
+        private Size size = Size.Small;
+
+        /// <summary>
+        /// Gets and sets ice
+        /// </summary>
         public bool Ice
         {
             get => ice;
             set => ice = value; 
         }
 
+        /// <summary>
+        /// gets and sets size
+        /// </summary>
         public Size Size
         {
             get => size;
             set => size = value; 
         }
 
+        /// <summary>
+        /// Gets the price of water
+        /// </summary>
         public double Price
         {
             get
@@ -37,6 +61,9 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Gets the calories of water
+        /// </summary>
         public uint Calories
         {
             get
@@ -52,6 +79,9 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Prints any special instructions
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -62,6 +92,10 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        /// <summary>
+        /// Prints the size and name
+        /// </summary>
+        /// <returns>string</returns>
         public override string ToString()
         {
             return size.ToString() + " Aretino Apple Juice";

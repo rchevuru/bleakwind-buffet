@@ -1,14 +1,37 @@
-﻿using System;
+﻿
+/*
+ * Author: Rana Chevuru 
+ * Class name: GardenOrcOmelette.cs
+ * Purpose: Class used to show price and calories for entrees
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// Class used to show price and calories for entrees
+    /// </summary>
     public class GardenOrcOmelette
     {
+        /// <summary>
+        /// Private varible that will called for Broccoli 
+        /// </summary>
         private bool broccoli = true;
+
+        /// <summary>
+        /// Private varible that will called for Mushrooms 
+        /// </summary>
         private bool mushrooms = true;
+
+        /// <summary>
+        /// Private varible that will called for Tomato 
+        /// </summary>
         private bool tomato = true;
+        /// <summary>
+        /// Private varible that will called for Chedder 
+        /// </summary>
         private bool chedder = true;
 
         /// <summary>
@@ -21,28 +44,45 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public uint Calories => 404;
 
-
+        /// <summary>
+        /// Gets and sets broccoli
+        /// </summary>
         public bool Broccoli
         {
             get => broccoli;
             set => broccoli = value;
         }
+
+        /// <summary>
+        /// Gets and sets mushrooms
+        /// </summary>
         public bool Mushrooms
         {
             get => mushrooms;
             set => mushrooms = value;
         }
+
+        /// <summary>
+        /// Gets and sets tomato
+        /// </summary>
         public bool Tomato
         {
             get => tomato;
             set => tomato = value;
         }
+
+        /// <summary>
+        /// Gets and sets chedder
+        /// </summary>
         public bool Chedder
         {
             get => chedder;
             set => chedder = value;
         }
 
+        /// <summary>
+        /// Prints any special instructions
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -56,6 +96,10 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
+        /// <summary>
+        /// Prints the name
+        /// </summary>
+        /// <returns>string</returns>
         public override string ToString()
         {
             return "Garden Orc Omelette";

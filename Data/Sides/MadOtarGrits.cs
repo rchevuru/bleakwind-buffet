@@ -1,10 +1,18 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru 
+ * Class name: MadOtarGrits.cs
+ * Purpose: Class used to show price and calories with sizes for sides 
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data.Sides
 {
+    /// <summary>
+    /// Class used to show price and calories with sizes for sides 
+    /// </summary>
     public class MadOtarGrits
     {
         /// <summary>
@@ -22,7 +30,7 @@ namespace BleakwindBuffet.Data.Sides
         }
 
         /// <summary>
-        /// Gets the price of the chhese grit
+        /// Gets the price of the cheese grit
         /// </summary>
         public double Price
         {
@@ -40,7 +48,7 @@ namespace BleakwindBuffet.Data.Sides
         }
 
         /// <summary>
-        /// Gets the calories of the chhese grit
+        /// Gets the calories of the cheese grit
         /// </summary>
         public uint Calories
         {

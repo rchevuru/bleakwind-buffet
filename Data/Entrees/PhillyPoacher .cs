@@ -1,14 +1,34 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru 
+ * Class name: PhillyPoacher .cs
+ * Purpose: Class used to show price and calories for entrees
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// Class used to show price and calories for entrees
+    /// </summary>
     public class PhillyPoacher
     {
+        /// <summary>
+        /// Private varible that will called for Sirloin 
+        /// </summary>
         private bool sirloin = true;
+
+        /// <summary>
+        /// Private varible that will called for Onion 
+        /// </summary>
         private bool onion = true;
+
+        /// <summary>
+        /// Private varible that will called for Roll 
+        /// </summary>
         private bool roll = true;
+
         /// <summary>
         /// Gets the price of the sandwich
         /// </summary>
@@ -19,24 +39,36 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public uint Calories => 784;
 
+        /// <summary>
+        /// Gets and sets sirloin
+        /// </summary>
         public bool Sirloin
         {
             get => sirloin;
             set => sirloin = value;
         }
 
+        /// <summary>
+        /// Gets and sets onion
+        /// </summary>
         public bool Onion
         {
             get => onion;
             set => onion = value;
         }
 
+        /// <summary>
+        /// Gets and sets roll
+        /// </summary>
         public bool Roll
         {
             get => roll;
             set => roll = value;
         }
 
+        /// <summary>
+        /// Prints any special instructions
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -49,6 +81,10 @@ namespace BleakwindBuffet.Data.Entrees
             }
         }
 
+        /// <summary>
+        /// Prints the name
+        /// </summary>
+        /// <returns>string</returns>
         public override string ToString()
         {
             return "Philly Poacher";
