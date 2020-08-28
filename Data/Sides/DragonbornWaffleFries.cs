@@ -21,6 +21,9 @@ namespace BleakwindBuffet.Data.Sides
             set => size = value;
         }
 
+        /// <summary>
+        /// Gets the price of the fries
+        /// </summary>
         public double Price
         {
             get
@@ -36,6 +39,9 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        /// <summary>
+        /// Gets the calories of the fries
+        /// </summary>
         public uint Calories
         {
             get
@@ -51,6 +57,9 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        /// <summary>
+        /// Prints any special instructions
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -60,6 +69,10 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        /// <summary>
+        /// Prints the size and name
+        /// </summary>
+        /// <returns>string</returns>
         public override string ToString()
         {
             return size.ToString() + " Dragonborn Waffle Fries";

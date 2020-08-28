@@ -59,6 +59,9 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        /// <summary>
+        /// Prints any special instructions
+        /// </summary>
         public List<string> SpecialInstructions
         {
             get
@@ -68,6 +71,10 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        /// <summary>
+        /// Prints the size and name
+        /// </summary>
+        /// <returns>string</returns>
         public override string ToString()
         {
             return size.ToString() + " Vokun Salad";
