@@ -83,7 +83,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <returns>string</returns>
         public override string ToString()
         {
-            return size.ToString() + "Mad Otar Grits";
+            return size.ToString() + " Mad Otar Grits";
         }
     }
 }

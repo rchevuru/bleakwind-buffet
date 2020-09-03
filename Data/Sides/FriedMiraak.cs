@@ -14,7 +14,7 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// Class used to show price and calories with sizes for sides 
     /// </summary>
-    class FriedMiraak
+    public class FriedMiraak
     {
         /// <summary>
         /// varible to get size from enum

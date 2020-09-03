@@ -9,7 +9,7 @@ using System.Text;
 using BleakwindBuffet.Data.Enums;
 
 
-namespace Data.Drinks
+namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// Class used to show price and calories with sizes for drinks 

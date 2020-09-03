@@ -18,7 +18,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Private varible that will called for Ice 
         /// </summary>
-        private bool ice = true;
+        private bool ice = false;
 
         /// <summary>
         /// varible to get size from enum
@@ -87,7 +87,7 @@ namespace BleakwindBuffet.Data.Drinks
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Ice) instructions.Add("Add ice");
+                if (Ice) instructions.Add("Add ice");
                 return instructions;
             }
         }

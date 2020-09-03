@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
 
-namespace Data.Drinks
+namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// Class used to show price and calories with sizes for drinks 
@@ -60,18 +60,14 @@ namespace Data.Drinks
         /// <summary>
         /// Gets the price of water
         /// </summary>
-        public double Price
-        {
-            get => 0.00;
-        }
+        public double Price => 0.00;
+
 
         /// <summary>
         /// Gets the calories of water
         /// </summary>
-        public uint Calories
-        {
-            get => 0;
-        }
+        public uint Calories => 0;
+        
 
         /// <summary>
         /// Prints any special instructions
