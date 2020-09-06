@@ -121,11 +121,26 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         public void ShouldReturnCorrectSpecialInstructions(bool includeBun, bool includeKetchup, bool includeMustard,
                                                                     bool includePickle, bool includeCheese)
         {
+            BriarheartBurger bhb = new BriarheartBurger();
+            bhb.Bun = includeBun;
+            bhb.Ketchup = includeKetchup;
+            bhb.Mustard = includeMustard;
+            bhb.Pickle = includePickle;
+            bhb.Cheese = includeCheese;
+            if (!includeBun) Assert.Contains("Hold bun", bhb.SpecialInstructions);
+            if (!includeKetchup) Assert.Contains("Hold ketchup",bhb.SpecialInstructions);
+            if (!includeMustard) Assert.Contains("Hold mustard", bhb.SpecialInstructions);
+            if (!includePickle) Assert.Contains("Hold pickle", bhb.SpecialInstructions);
+            if (!includeCheese) Assert.Contains("Hold cheese", bhb.SpecialInstructions);
+            else Assert.Empty(bhb.SpecialInstructions);
+
         }
 
         [Fact]
         public void ShouldReturnCorrectToString()
         {
+            BriarheartBurger bhb = new BriarheartBurger();
+            Assert.Equal("Briarheart Burger", bhb.ToString()); 
         }
     }
 }

@@ -99,7 +99,8 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             ww.Ice = includeIce;
             ww.Lemon = includeLemon;
             if (!includeIce) Assert.Contains("Hold ice", ww.SpecialInstructions);
-            if (includeLemon) Assert.Contains("Add Lemon", ww.SpecialInstructions); 
+            if (includeLemon) Assert.Contains("Add lemon", ww.SpecialInstructions);
+            if (includeIce && !includeLemon) Assert.Empty(ww.SpecialInstructions); 
         }
 
         [Theory]
