@@ -40,10 +40,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         public void ShouldBeAbleToSetIce()
         {
             SailorSoda ss = new SailorSoda();
-            ss.Ice = true;
-            Assert.True(ss.Ice);
             ss.Ice = false;
-            Assert.False(ss.Ice); 
+            Assert.False(ss.Ice);
+            ss.Ice = true;
+            Assert.True(ss.Ice); 
         }
 
         [Fact]

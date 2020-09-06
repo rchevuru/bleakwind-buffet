@@ -38,10 +38,20 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
         public void ShouldBeAbleToSetIce()
         {
             WarriorWater ww = new WarriorWater();
-            ww.Ice = true;
-            Assert.True(ww.Ice);
             ww.Ice = false;
             Assert.False(ww.Ice);
+            ww.Ice = true;
+            Assert.True(ww.Ice);
+        }
+
+        [Fact]
+        public void ShouldBeAbleToSetLemon()
+        {
+            WarriorWater ww = new WarriorWater();
+            ww.Lemon = true;
+            Assert.True(ww.Lemon);
+            ww.Lemon = false;
+            Assert.False(ww.Lemon);
         }
 
         [Fact]
