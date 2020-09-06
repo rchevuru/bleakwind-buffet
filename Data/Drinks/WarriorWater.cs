@@ -60,19 +60,46 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the price of water
         /// </summary>
-        public double Price => 0.00;
+        public double Price
+        {
+            get
+            {
+                if (size == Size.Small)
+                    return 0.00;
+                if (size == Size.Medium)
+                    return 0.00;
+                if (size == Size.Large)
+                    return 0.00;
+
+                return 0;
+            }
+        }
 
 
         /// <summary>
         /// Gets the calories of water
         /// </summary>
-        public uint Calories => 0;
-        
+        public uint Calories 
+        {
+            get
+            {
+                if (size == Size.Small)
+                    return 0;
+                if (size == Size.Medium)
+                    return 0;
+                if (size == Size.Large)
+                    return 0;
 
-        /// <summary>
-        /// Prints any special instructions
-        /// </summary>
-        public List<string> SpecialInstructions
+                return 1;
+            }
+        }
+           
+
+
+    /// <summary>
+    /// Prints any special instructions
+    /// </summary>
+    public List<string> SpecialInstructions
         {
             get
             {
