@@ -42,7 +42,7 @@ namespace BleakwindBuffet.Data.Sides
                 if (size == Size.Medium)
                     return 0.76;
                 if (size == Size.Large)
-                    return .096;
+                    return .96;
 
                 return 0;
             }

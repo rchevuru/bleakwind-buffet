@@ -37,11 +37,11 @@ namespace BleakwindBuffet.Data.Sides
             get
             {
                 if (size == Size.Small)
-                    return 1.78;
+                    return 1.22;
                 if (size == Size.Medium)
-                    return 2.01;
+                    return 1.58;
                 if (size == Size.Large)
-                    return 2.88;
+                    return 1.93;
 
                 return 0;
             }
@@ -55,11 +55,11 @@ namespace BleakwindBuffet.Data.Sides
             get
             {
                 if (size == Size.Small)
-                    return 151;
+                    return 105;
                 if (size == Size.Medium)
-                    return 236;
+                    return 142;
                 if (size == Size.Large)
-                    return 306;
+                    return 179;
 
                 return 0;
             }
