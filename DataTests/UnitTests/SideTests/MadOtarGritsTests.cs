@@ -12,13 +12,19 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class MadOtarGritsTests
     {
+        /// <summary>
+        /// Cheacks to see the defult size of the container is zero. 
+        /// </summary>
         [Fact]
         public void ShouldBeSmallByDefault()
         {
             MadOtarGrits mog = new MadOtarGrits();
             Assert.Equal(Size.Small, mog.Size);
         }
-                
+
+        /// <summary>
+        /// Cheacks to see if we can change the size of container 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
@@ -31,6 +37,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.Equal(Size.Small, mog.Size);
         }
 
+        /// <summary>
+        /// Cheacks to see if there is any special instructions for the chef 
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectStringOnSpecialInstructions()
         {
@@ -38,6 +47,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.Empty(mog.SpecialInstructions);
         }
 
+        /// <summary>
+        /// Cheacks to see the correct  <paramref name="price"/> with the correct <paramref name="size"/> 
+        /// </summary>
+        /// <param name="size">size of the container</param>
+        /// <param name="price">price of the container</param>
         [Theory]
         [InlineData(Size.Small, 1.22)]
         [InlineData(Size.Medium, 1.58)]
@@ -49,6 +63,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.Equal(price, mog.Price);
         }
 
+        /// <summary>
+        /// Cheacks to see the correct <paramref name="calories"/> with the correct <paramref name="size"/>
+        /// </summary>
+        /// <param name="size">size of the container</param>
+        /// <param name="calories">calories for the cheese grits</param>
         [Theory]
         [InlineData(Size.Small, 105)]
         [InlineData(Size.Medium, 142)]
@@ -60,6 +79,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.Equal(calories, mog.Calories);
         }
 
+        /// <summary>
+        /// Cheacks if it order in the receipt matches  
+        /// </summary>
+        /// <param name="size">size of container</param>
+        /// <param name="name">name of item the consumer wants to buy</param>
         [Theory]
         [InlineData(Size.Small, "Small Mad Otar Grits")]
         [InlineData(Size.Medium, "Medium Mad Otar Grits")]

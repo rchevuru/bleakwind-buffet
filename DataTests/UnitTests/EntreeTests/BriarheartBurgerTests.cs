@@ -10,9 +10,15 @@ using BleakwindBuffet.Data.Entrees;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
+    /// <summary>
+    /// Tests the BriarheartBurger.cs class
+    /// </summary>
     public class BriarheartBurgerTests
     {
         
+        /// <summary>
+        /// Cheaks to see if burger has bun by default 
+        /// </summary>
         [Fact]
         public void ShouldIncludeBunByDefault()
         {
@@ -21,6 +27,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 
         }
 
+        /// <summary>
+        /// Cheaks to see if burger has ketchup by default 
+        /// </summary
         [Fact]
         public void ShouldIncludeKetchupByDefault()
         {
@@ -29,6 +38,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 
         }
 
+        /// <summary>
+        /// Cheaks to see if mustard has bun by default 
+        /// </summary
         [Fact]
         public void ShouldIncludeMustardByDefault()
         {
@@ -36,6 +48,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(bhb.Mustard); 
         }
 
+        /// <summary>
+        /// /// <summary>
+        /// Cheaks to see if burger has pickle by default 
+        /// </summary
+        /// </summary>
         [Fact]
         public void ShouldIncludePickleByDefault()
         {
@@ -43,6 +60,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(bhb.Pickle); 
         }
 
+        /// <summary>
+        /// Cheaks to see if burger has cheese by default 
+        /// </summary
         [Fact]
         public void ShouldIncludeCheeseByDefault()
         {
@@ -50,6 +70,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(bhb.Cheese); 
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the bun 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetBun()
         {
@@ -61,6 +84,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the ketchup 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetKetchup()
         {
@@ -71,6 +97,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(bhb.Ketchup); 
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the mustard 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetMustard()
         {
@@ -81,6 +110,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(bhb.Mustard);
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the pickle 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetPickle()
         {
@@ -91,6 +123,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(bhb.Pickle);
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the cheese 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetCheese()
         {
@@ -101,6 +136,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(bhb.Cheese); 
         }
 
+        /// <summary>
+        /// Ches to see if the price is right
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
@@ -108,6 +146,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.Equal(6.32, bhb.Price); 
         }
 
+        /// <summary>
+        /// Cheacks to see if calories are correct 
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
@@ -115,6 +156,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.Equal((decimal)743, (decimal)bhb.Calories); 
         }
 
+        /// <summary>
+        /// Cheacks to see if there is any special instructions for the chef 
+        /// </summary>
+        /// <param name="includeBun">Should the bun be removed or not </param>
+        /// <param name="includeKetchup">Should the ketchup be removed or not</param>
+        /// <param name="includeMustard">Should the mustard be removed or not</param>
+        /// <param name="includePickle">Should the pickle be removed or not</param>
+        /// <param name="includeCheese">Should the cheese be removed or not</param>
         [Theory]
         [InlineData(true, true, true, true, true)]
         [InlineData(false, false, false, false, false)]
@@ -136,6 +185,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 
         }
 
+        /// <summary>
+        /// Cheacks if it order in the recepit matches  
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectToString()
         {

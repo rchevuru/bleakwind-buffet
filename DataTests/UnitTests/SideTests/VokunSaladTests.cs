@@ -12,6 +12,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class VokunSaladTests
     {
+        /// <summary>
+        /// Cheacks to see the defult size of the container is zero. 
+        /// </summary>
         [Fact]
         public void ShouldBeSmallByDefault()
         {
@@ -19,6 +22,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.Equal(Size.Small, vs.Size);
         }
 
+        /// <summary>
+        /// Cheacks to see if we can change the size of container 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
@@ -31,6 +37,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.Equal(Size.Small, vs.Size);
         }
 
+        /// <summary>
+        /// Cheacks to see if there is any special instructions for the chef 
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectSpecialInstructions()
         {
@@ -38,6 +47,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.Empty(vs.SpecialInstructions);
         }
 
+        /// <summary>
+        /// Cheacks to see the correct  <paramref name="price"/> with the correct <paramref name="size"/> 
+        /// </summary>
+        /// <param name="size">size of the container</param>
+        /// <param name="price">price of the container</param>
         [Theory]
         [InlineData(Size.Small, 0.93)]
         [InlineData(Size.Medium, 1.28)]
@@ -49,6 +63,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.Equal(price, vs.Price);
         }
 
+        /// <summary>
+        /// Cheacks to see the correct <paramref name="calories"/> with the correct <paramref name="size"/>
+        /// </summary>
+        /// <param name="size">size of the container</param>
+        /// <param name="calories">calories for the salad</param>
         [Theory]
         [InlineData(Size.Small, 41)]
         [InlineData(Size.Medium, 52)]
@@ -60,6 +79,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.Equal(calories, vs.Calories);
         }
 
+        /// <summary>
+        /// Cheacks if it order in the receipt matches  
+        /// </summary>
+        /// <param name="size">size of container</param>
+        /// <param name="name">name of item the consumer wants to buy</param>
         [Theory]
         [InlineData(Size.Small, "Small Vokun Salad")]
         [InlineData(Size.Medium, "Medium Vokun Salad")]

@@ -89,6 +89,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the mustard 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetMustard()
         {
@@ -99,6 +102,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(dd.Mustard);
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the pickle 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetPickle()
         {
@@ -109,6 +115,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(dd.Pickle); 
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the cheese 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetCheese()
         {
@@ -119,6 +128,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(dd.Cheese); 
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the tomato 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetTomato()
         {
@@ -129,6 +141,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(dd.Tomato);
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the lettuce 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetLettuce()
         {
@@ -139,6 +154,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(dd.Lettuce);
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the mayo 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetMayo()
         {
@@ -149,6 +167,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(dd.Mayo);
         }
 
+        /// <summary>
+        /// Cheacks to see if price is correct 
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
@@ -156,6 +177,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.Equal(7.32, dd.Price); 
         }
 
+        /// <summary>
+        /// Cheacks to see if calories are correct 
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
@@ -163,6 +187,17 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.Equal((double)843, (double)dd.Calories); 
         }
 
+        /// <summary>
+        /// Cheacks to see if there is any special instructions for the chef 
+        /// </summary>
+        /// <param name="includeBun">Should the bun be removed or not </param>
+        /// <param name="includeKetchup">Should the ketchup be removed or not </param>
+        /// <param name="includeMustard">Should the mustard be removed or not </param>
+        /// <param name="includePickle">Should the pickle be removed or not </param>
+        /// <param name="includeCheese">Should the cheese be removed or not </param>
+        /// <param name="includeTomato">Should the tomato be removed or not </param>
+        /// <param name="includeLettuce">Should the lettuce be removed or not </param>
+        /// <param name="includeMayo">Should the mayo be removed or not </param>
         [Theory]
         [InlineData(true, true, true, true, true, true, true, true)]
         [InlineData(false, false, false, false, false, false, false, false)]
@@ -192,6 +227,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 
         }
 
+        /// <summary>
+        /// Cheacks if it order in the recepit matches  
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectToString()
         {

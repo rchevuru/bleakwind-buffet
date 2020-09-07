@@ -11,8 +11,14 @@ using BleakwindBuffet.Data.Sides;
 
 namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
+    /// <summary>
+    /// Class tests the DragonbornWaffleFries.cs class
+    /// </summary>
     public class DragonbornWaffleFriesTests
     {
+        /// <summary>
+        /// Cheacks to see the defult size of the container is zero. 
+        /// </summary>
         [Fact]
         public void ShouldBeSmallByDefault()
         {
@@ -20,6 +26,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.Equal(Size.Small, dwf.Size); 
         }
 
+        /// <summary>
+        /// Cheacks to see if we can change the size of container 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
@@ -32,6 +41,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.Equal(Size.Small, dwf.Size); 
         }
 
+        /// <summary>
+        /// Cheacks to see if there is any special instructions for the chef 
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectSpecialInstructions()
         {
@@ -39,6 +51,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.Empty(dwf.SpecialInstructions);
         }
 
+        /// <summary>
+        /// Cheacks to see the correct  <paramref name="price"/> with the correct <paramref name="size"/> 
+        /// </summary>
+        /// <param name="size">size of the container</param>
+        /// <param name="price">price of the container</param>
         [Theory]
         [InlineData(Size.Small, 0.42)]
         [InlineData(Size.Medium, 0.76)]
@@ -50,6 +67,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.Equal(price, dwf.Price); 
         }
 
+        /// <summary>
+        /// Cheacks to see the correct <paramref name="calories"/> with the correct <paramref name="size"/>
+        /// </summary>
+        /// <param name="size">size of the container</param>
+        /// <param name="calories">calories for the fries</param>
         [Theory]
         [InlineData(Size.Small, 77)]
         [InlineData(Size.Medium, 89)]
@@ -61,6 +83,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             Assert.Equal(calories, dwf.Calories);
         }
 
+        /// <summary>
+        /// Cheacks if it order in the recepit matches  
+        /// </summary>
+        /// <param name="size">size of container</param>
+        /// <param name="name">name of item the consumer wants to buy</param>
         [Theory]
         [InlineData(Size.Small, "Small Dragonborn Waffle Fries")]
         [InlineData(Size.Medium, "Medium Dragonborn Waffle Fries")]
