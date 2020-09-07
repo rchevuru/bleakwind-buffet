@@ -33,6 +33,8 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Gets the price of the fries
         /// </summary>
+        /// <exception>returns 0 if the other values did not return </exception>
+        /// <return>the price</return>
         public double Price
         {
             get
@@ -51,6 +53,8 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Gets the calories of the fries
         /// </summary>
+        /// <exception>returns 0 if the other values did not return </exception>
+        /// <return>the calories</return>
         public uint Calories
         {
             get
@@ -69,6 +73,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Prints any special instructions
         /// </summary>
+        /// <return>instructions for chef</return>
         public List<string> SpecialInstructions
         {
             get
@@ -81,7 +86,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Prints the size and name
         /// </summary>
-        /// <returns>string</returns>
+        /// <returns>string for reciet</returns>
         public override string ToString()
         {
             return size.ToString() + " Dragonborn Waffle Fries";

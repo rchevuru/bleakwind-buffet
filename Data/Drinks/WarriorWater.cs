@@ -60,6 +60,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the price of water
         /// </summary>
+        /// <exception>Returns 1 if non of other prices not return correctly</exception>
         public double Price
         {
             get
@@ -71,7 +72,7 @@ namespace BleakwindBuffet.Data.Drinks
                 if (size == Size.Large)
                     return 0.00;
 
-                return 0;
+                return 1;
             }
         }
 
@@ -79,6 +80,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the calories of water
         /// </summary>
+        ///  /// <exception>Returns 1 if non of other calories not return correctly</exception>
         public uint Calories 
         {
             get
@@ -99,6 +101,7 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// Prints any special instructions
     /// </summary>
+    /// <return>the Spcial instruction for chef</return>
     public List<string> SpecialInstructions
         {
             get
@@ -113,7 +116,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Prints the size and name
         /// </summary>
-        /// <returns>string</returns>
+        /// <returns>the order</returns>
         public override string ToString()
         {
             return size.ToString() + " Warrior Water";

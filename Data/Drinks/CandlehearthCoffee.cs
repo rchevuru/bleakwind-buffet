@@ -75,6 +75,8 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the price of water
         /// </summary>
+        /// <exception>returns 0 if the other values did not return </exception>
+        /// <return>the price</return>
         public double Price
         {
             get
@@ -93,6 +95,8 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the calories of water
         /// </summary>
+        /// <exception>returns 0 if the other values did not return </exception>
+        /// <return>the calories</return>
         public uint Calories
         {
             get
@@ -111,6 +115,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Prints any special instructions
         /// </summary>
+        /// <returns>Instructions for chef</returns>
         public List<string> SpecialInstructions
         {
             get
@@ -125,7 +130,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Prints the size,name, and if it's decafed
         /// </summary>
-        /// <returns>string</returns>
+        /// <returns>output for reciet</returns>
         public override string ToString()
         {
             if (!Decaf)

@@ -32,6 +32,8 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Gets the price of the cheese grit
         /// </summary>
+        /// <exception>returns 0 if the other values did not return </exception>
+        /// <return>the price</return>
         public double Price
         {
             get
@@ -50,6 +52,8 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Gets the calories of the cheese grit
         /// </summary>
+        /// <exception>returns 0 if the other values did not return </exception>
+        /// <return>the calories</return>
         public uint Calories
         {
             get
@@ -68,6 +72,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Prints any special instructions
         /// </summary>
+        /// <returns>THe instructios for chef</returns>
         public List<string> SpecialInstructions
         {
             get
@@ -80,7 +85,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Prints the size and name
         /// </summary>
-        /// <returns>string</returns>
+        /// <returns>string of output</returns>
         public override string ToString()
         {
             return size.ToString() + " Mad Otar Grits";

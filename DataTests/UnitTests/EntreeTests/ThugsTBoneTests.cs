@@ -10,8 +10,15 @@ using BleakwindBuffet.Data.Entrees;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
+    /// <summary>
+    /// Test the ThugsTBone.cs class
+    /// </summary>
     public class ThugsTBoneTests
     {
+
+        /// <summary>
+        /// Cheacks to see if price is correct 
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
@@ -19,6 +26,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.Equal(6.44, ttb.Price); 
         }
 
+        /// <summary>
+        /// Cheacks to see if calories is correct 
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
@@ -26,6 +36,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.Equal((double)982, (double)ttb.Calories); 
         }
 
+        /// <summary>
+        /// Cheacks to see if there is any special instructions for the chef 
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectSpecialInstructions()
         {
@@ -33,6 +46,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.Empty(ttb.SpecialInstructions);
         }
 
+        /// <summary>
+        /// Cheacks if it order in the recepit matches  
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectToString()
         {

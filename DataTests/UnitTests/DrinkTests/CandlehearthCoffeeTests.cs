@@ -11,15 +11,23 @@ using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
-    public class CandlehearthCoffeeTests
-    {
+    /// <summary>
+    /// Test the CandlehearthCoffee.cs class
+    /// </summary>
+    public class CandlehearthCoffeeTests { 
+    
+        /// <summary>
+        /// Check is ice is not included in the beginning 
+        /// </summary>
         [Fact]
         public void ShouldNotIncludeIceByDefault()
         {
             CandlehearthCoffee chc = new CandlehearthCoffee();
             Assert.False(chc.Ice); 
         }
-
+        /// <summary>
+        /// Sees if the defult value of decaf is false
+        /// </summary>
         [Fact]
         public void ShouldNotBeDecafByDefault()
         {
@@ -27,6 +35,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.False(chc.Decaf); 
         }
 
+        /// <summary>
+        /// Sees if the starting room for cream is false
+        /// </summary>
         [Fact]
         public void ShouldNotHaveRoomForCreamByDefault()
         {
@@ -34,6 +45,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.False(chc.RoomForCream); 
         }
 
+        /// <summary>
+        /// Sees if the starting size is small
+        /// </summary>
         [Fact]
         public void ShouldBeSmallByDefault()
         {
@@ -41,6 +55,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.Equal(Size.Small, chc.Size); 
         }
 
+        /// <summary>
+        /// Sees if we can change the the addtion of ice or not 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetIce()
         {
@@ -51,6 +68,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.False(chc.Ice); 
         }
 
+        /// <summary>
+        /// Sees if we can change the the addtion of decaf or not 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetDecaf()
         {
@@ -60,7 +80,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             chc.Decaf = false;
             Assert.False(chc.Decaf); 
         }
-
+        /// <summary>
+        /// Sees if we can change the the addtion of cream or not 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetRoomForCream()
         {
@@ -70,7 +92,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             chc.RoomForCream = false;
             Assert.False(chc.RoomForCream);
         }
-
+        /// <summary>
+        /// Sees if we can change the size 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
@@ -82,7 +106,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             chc.Size = Size.Small;
             Assert.Equal(Size.Small, chc.Size);
         }
-
+        /// <summary>
+        /// Cheacks to see the correct  <paramref name="price"/> with the correct <paramref name="size"/> 
+        /// </summary>
+        /// <param name="size">size of container</param>
+        /// <param name="price">price of container</param>
         [Theory]
         [InlineData(Size.Small, 0.75)]
         [InlineData(Size.Medium, 1.25)]
@@ -94,6 +122,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.Equal(price, chc.Price); 
         }
 
+        /// <summary>
+        /// Cheacks to see the correct <paramref name="cal"/> with the correct <paramref name="size"/>        /// </summary>
+        /// <param name="size">Size of container</param>
+        /// <param name="cal">Calories of the coffee</param>
         [Theory]
         [InlineData(Size.Small, 7)]
         [InlineData(Size.Medium, 10)]
@@ -105,6 +137,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.Equal(cal, chc.Calories); 
         }
 
+        /// <summary>
+        /// Cheacks to see if there is any special instructions for the chef
+        /// </summary>
+        /// <param name="includeIce">Checks if ice should be added or not</param>
+        /// <param name="includeCream">Checks if cream should be added or not</param>
         [Theory]
         [InlineData(true, true)]
         [InlineData(true, false)]
@@ -120,6 +157,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             if(!includeIce && !includeCream)Assert.Empty(chc.SpecialInstructions); 
         }
 
+        /// <summary>
+        /// Cheacks if it order in the recepit matches  
+        /// </summary>
         [Theory]
         [InlineData(true, Size.Small, "Small Decaf Candlehearth Coffee")]
         [InlineData(true, Size.Medium, "Medium Decaf Candlehearth Coffee")]

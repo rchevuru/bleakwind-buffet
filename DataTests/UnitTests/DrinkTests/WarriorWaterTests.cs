@@ -11,8 +11,14 @@ using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
+    /// <summary>
+    /// Test the WarriorWater.cs class
+    /// </summary>
     public class WarriorWaterTests
     {
+        /// <summary>
+        /// Sees if the dufault has ice 
+        /// </summary>
         [Fact]
         public void ShouldIncludeIceByDefault()
         {
@@ -20,13 +26,18 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.True(ww.Ice);
         }
 
+        /// <summary>
+        /// Sees if the dufault does not have lemon
+        /// </summary>
         [Fact]
         public void ShouldNotIncludeLemonByDefault()
         {
             WarriorWater ww = new WarriorWater();
             Assert.False(ww.Lemon);
         }
-
+        /// <summary>
+        /// Sees if the dufault size is small
+        /// </summary>
         [Fact]
         public void ShouldBeSmallByDefault()
         {
@@ -34,6 +45,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.Equal(Size.Small, ww.Size);
         }
 
+        /// <summary>
+        /// Sees we can see if we can add and remove ice 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetIce()
         {
@@ -44,6 +58,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.True(ww.Ice);
         }
 
+        /// <summary>
+        /// Cheacks to see if we can change the size of container 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetLemon()
         {
@@ -54,6 +71,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.False(ww.Lemon);
         }
 
+        /// <summary>
+        /// Cheacks to see if we can change the size of container 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetSize()
         {
@@ -66,6 +86,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.Equal(Size.Small, ww.Size);
         }
 
+        /// <summary>
+        /// Cheacks to see the correct  <paramref name="price"/> with the correct <paramref name="size"/> 
+        /// </summary>
+        /// <param name="size">size of the container</param>
+        /// <param name="price">price of the container</param>
         [Theory]
         [InlineData(Size.Small, 0.00)]
         [InlineData(Size.Medium, 0.00)]
@@ -77,6 +102,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.Equal(price, ww.Price);
         }
 
+        /// <summary>
+        /// Cheacks to see the correct <paramref name="cal"/> with the correct <paramref name="size"/>
+        /// </summary>
+        /// <param name="size">size of the container</param>
+        /// <param name="cal">calories for the fries</param>
         [Theory]
         [InlineData(Size.Small, 0)]
         [InlineData(Size.Medium, 0)]
@@ -88,6 +118,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             Assert.Equal(cal, ww.Calories);
         }
 
+        /// <summary>
+        /// Cheacks to see if there is any special instructions for the chef 
+        /// </summary>
+        /// <param name="includeIce">Sees if it needs to add ice </param>
+        /// <param name="includeLemon">Sees if it needs to add lemon</param>
         [Theory]
         [InlineData(true, true)]
         [InlineData(true, false)]
@@ -103,6 +138,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             if (includeIce && !includeLemon) Assert.Empty(ww.SpecialInstructions); 
         }
 
+        /// <summary>
+        /// Cheacks if it order in the recepit matches  
+        /// </summary>
         [Theory]
         [InlineData(Size.Small, "Small Warrior Water")]
         [InlineData(Size.Medium, "Medium Warrior Water")]

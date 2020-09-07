@@ -10,8 +10,14 @@ using BleakwindBuffet.Data.Entrees;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
+    /// <summary>
+    ///Test the GardenOrcOmelette.cs class
+    /// </summary>
     public class GardenOrcOmeletteTests
     {
+        /// <summary>
+        /// Cheaks to see if burger has Broccoli by default 
+        /// </summary>
         [Fact]
         public void ShouldInlcudeBroccoliByDefault()
         {
@@ -19,6 +25,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(goo.Broccoli);
         }
 
+        /// <summary>
+        /// Cheaks to see if burger has Mushrooms by default 
+        /// </summary>
         [Fact]
         public void ShouldInlcudeMushroomsByDefault()
         {
@@ -26,6 +35,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(goo.Mushrooms);
         }
 
+
+        /// <summary>
+        /// Cheaks to see if burger has Tomato by default 
+        /// </summary>
         [Fact]
         public void ShouldInlcudeTomatoByDefault()
         {
@@ -33,6 +46,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(goo.Tomato); 
         }
 
+        /// <summary>
+        /// Cheaks to see if burger has Chedder by default 
+        /// </summary>
         [Fact]
         public void ShouldInlcudeCheddarByDefault()
         {
@@ -40,6 +56,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(goo.Chedder);
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the broccoli 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetBroccoli()
         {
@@ -50,6 +69,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(goo.Broccoli); 
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the mushrooms 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetMushrooms()
         {
@@ -60,6 +82,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(goo.Mushrooms);
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the tomato 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetTomato()
         {
@@ -70,6 +95,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(goo.Tomato);
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the chedder 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetCheddar()
         {
@@ -80,6 +108,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(goo.Chedder);
         }
 
+        /// <summary>
+        /// Cheacks to see if price is correct 
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
@@ -87,6 +118,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.Equal(4.57, goo.Price); 
         }
 
+        /// <summary>
+        /// Cheacks to see if calories is correct 
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
@@ -94,6 +128,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.Equal((double)404, (double)goo.Calories); 
         }
 
+        /// <summary>
+        ///  Cheacks to see if there is any special instructions for the chef 
+        /// </summary>
+        /// <param name="includeBroccoli">Should the broccoli be removed or not</param>
+        /// <param name="includeMushrooms">Should the mushroom be removed or not</param>
+        /// <param name="includeTomato">Should the tomato be removed or not</param>
+        /// <param name="includeCheddar">Should the cheddar be removed or not</param>
         [Theory]
         [InlineData(true, true, true, true)]
         [InlineData(false, false, false, false)]
@@ -112,6 +153,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             else Assert.Empty(goo.SpecialInstructions); 
         }
 
+        /// <summary>
+        /// Cheacks if it order in the recepit matches  
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectToString()
         {

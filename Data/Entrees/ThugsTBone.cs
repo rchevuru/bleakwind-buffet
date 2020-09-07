@@ -27,6 +27,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Prints any special instructions
         /// </summary>
+        /// <return>instruction for chef</return>
         public List<string> SpecialInstructions
         {
             get
@@ -39,7 +40,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Prints the name
         /// </summary>
-        /// <returns>string</returns>
+        /// <returns>output for reciet</returns>
         public override string ToString()
         {
             return "Thugs T-Bone";

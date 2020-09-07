@@ -61,6 +61,8 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the price of water
         /// </summary>
+        /// <exception>returns 0 if the other values did not return</exception>
+        /// <return>The price</return>
         public double Price
         {
             get
@@ -79,6 +81,8 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets the calories of water
         /// </summary>
+        /// <exception>returns 0 if the other values did not return </exception>
+        /// <return>the calories</return>
         public uint Calories
         {
             get
@@ -97,6 +101,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Prints any special instructions
         /// </summary>
+        /// <return>Instruction for chef</return>
         public List<string> SpecialInstructions
         {
             get
@@ -110,6 +115,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Prints the size and name
         /// </summary>
+        /// <returns> the output of reciet</returns>
         public override string ToString()
         {
             return size.ToString() + " " + flavor.ToString() + " Sailor Soda";

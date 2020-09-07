@@ -10,15 +10,24 @@ using BleakwindBuffet.Data.Entrees;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
+    /// <summary>
+    /// Test the SmokehouseSkeleton.cs class
+    /// </summary>
     public class SmokehouseSkeletonTests
-    {        
-        [Fact]
+    {
+
+        /// <summary>
+        /// Cheaks to see if burger has SausageLink by default 
+        /// </summary>
         public void ShouldInlcudeSausageByDefault()
         {
             SmokehouseSkeleton shs = new SmokehouseSkeleton();
             Assert.True(shs.SausageLink); 
         }
 
+        /// <summary>
+        /// Cheaks to see if burger has Egg by default 
+        /// </summary>
         [Fact]
         public void ShouldInlcudeEggByDefault()
         {
@@ -26,6 +35,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(shs.Egg);
         }
 
+        /// <summary>
+        /// Cheaks to see if burger has HashBrown by default 
+        /// </summary>
         [Fact]
         public void ShouldInlcudeHashbrownsByDefault()
         {
@@ -33,6 +45,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(shs.HashBrowns); 
         }
 
+        /// <summary>
+        /// Cheaks to see if burger has Pancake by default 
+        /// </summary>
         [Fact]
         public void ShouldInlcudePancakeByDefault()
         {
@@ -40,6 +55,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(shs.Pancake); 
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the SausageLink 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetSausage()
         {
@@ -50,6 +68,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(shs.SausageLink); 
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the Egg 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetEgg()
         {
@@ -60,6 +81,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(shs.Egg);
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the HashBrowns 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetHashbrowns()
         {
@@ -70,6 +94,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(shs.HashBrowns);
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the Pancake 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetPancake()
         {
@@ -80,6 +107,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(shs.Pancake);
         }
 
+        /// <summary>
+        /// Cheacks to see if price is correct 
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
@@ -87,6 +117,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.Equal(5.62, shs.Price); 
         }
 
+        /// <summary>
+        /// Cheacks to see if calories is correct 
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
@@ -94,6 +127,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.Equal((decimal) 602, (decimal) shs.Calories); 
         }
 
+        /// <summary>
+        /// Cheacks to see if there is any special instructions for the chef 
+        /// </summary>
+        /// <param name="includeSausage">Should the sausage be removed or not</param>
+        /// <param name="includeEgg">Should the egg be removed or not</param>
+        /// <param name="includeHashbrowns">Should the hash browns be removed or not</param>
+        /// <param name="includePancake">Should the pancake be removed or not</param>
         [Theory]
         [InlineData(true, true, true, true)]
         [InlineData(false, false, false, false)]
@@ -112,6 +152,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             else Assert.Empty(shs.SpecialInstructions); 
         }
 
+        /// <summary>
+        /// Cheacks if it order in the recepit matches  
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectToString()
         {

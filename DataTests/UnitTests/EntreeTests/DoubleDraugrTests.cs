@@ -9,9 +9,15 @@ using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
-{
+
+{/// <summary>
+/// Test the DoubleDraugr.cs class
+/// </summary>
     public class DoubleDraugrTests
-    {   
+    {
+        /// <summary>
+        /// Cheaks to see if burger has Bun by default 
+        /// </summary>
         [Fact]
         public void ShouldIncludeBunByDefault()
         {
@@ -19,6 +25,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(dd.Bun); 
         }
 
+        /// <summary>
+        /// Cheaks to see if burger has Ketchup by default 
+        /// </summary>
         [Fact]
         public void ShouldIncludeKetchupByDefault()
         {
@@ -26,6 +35,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(dd.Ketchup);
         }
 
+        /// <summary>
+        /// Cheaks to see if burger has Mustard by default 
+        /// </summary>
         [Fact]
         public void ShouldIncludeMustardByDefault()
         {
@@ -33,6 +45,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(dd.Mustard);
         }
 
+        /// <summary>
+        /// Cheaks to see if burger has pickle by default 
+        /// </summary>
         [Fact]
         public void ShouldIncludePickleByDefault()
         {
@@ -40,6 +55,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(dd.Pickle);
         }
 
+        /// <summary>
+        /// Cheaks to see if burger has cheese by default 
+        /// </summary>
         [Fact]
         public void ShouldIncludeCheeseByDefault()
         {
@@ -47,6 +65,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(dd.Cheese); 
         }
 
+        /// <summary>
+        /// Cheaks to see if burger has tamato by default 
+        /// </summary>
         [Fact]
         public void ShouldIncludeTomatoByDefault()
         {
@@ -54,6 +75,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(dd.Tomato); 
         }
 
+        /// <summary>
+        /// Cheaks to see if burger has lettuce by default 
+        /// </summary>
         [Fact]
         public void ShouldIncludeLettuceByDefault()
         {
@@ -61,6 +85,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(dd.Lettuce);
         }
 
+        /// <summary>
+        /// Cheaks to see if burger has mayo by default 
+        /// </summary>
         [Fact]
         public void ShouldIncludeMayoByDefault()
         {
@@ -68,6 +95,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(dd.Mayo);
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the bun 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetBun()
         {
@@ -78,6 +108,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(dd.Bun); 
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the ketchup 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetKetchup()
         {

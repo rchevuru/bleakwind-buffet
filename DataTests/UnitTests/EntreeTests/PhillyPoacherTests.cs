@@ -10,8 +10,14 @@ using BleakwindBuffet.Data.Entrees;
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
+    /// <summary>
+    ///  Test the PhillyPoacher.cs class
+    /// </summary>
     public class PhillyPoacherTests
     {
+        /// <summary>
+        /// Cheaks to see if burger has Sirlion by default 
+        /// </summary>
         [Fact]
         public void ShouldInlcudeSirloinByDefault()
         {
@@ -19,6 +25,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(pp.Sirloin);
         }
 
+        /// <summary>
+        /// Cheaks to see if burger has Onion by default 
+        /// </summary>
         [Fact]
         public void ShouldInlcudeOnionByDefault()
         {
@@ -26,6 +35,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(pp.Onion);
         }
 
+        /// <summary>
+        /// Cheaks to see if burger has Roll by default 
+        /// </summary>
         [Fact]
         public void ShouldInlcudeRollByDefault()
         {
@@ -33,6 +45,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(pp.Roll); 
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the sirlion 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetSirloin()
         {
@@ -43,6 +58,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(pp.Sirloin); 
         }
 
+        /// <summary>
+        /// Cheacks to see we can remove the onion 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetOnions()
         {
@@ -52,7 +70,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             pp.Onion = true;
             Assert.True(pp.Onion);
         }
-
+        /// <summary>
+        /// Cheacks to see we can remove the roll 
+        /// </summary>
         [Fact]
         public void ShouldBeAbleToSetRoll()
         {
@@ -63,6 +83,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.True(pp.Roll);
         }
 
+        /// <summary>
+        /// Cheacks to see if price is correct 
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectPrice()
         {
@@ -70,6 +93,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.Equal(7.23, pp.Price); 
         }
 
+        /// <summary>
+        /// Cheacks to see if calories is correct 
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
@@ -77,6 +103,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             Assert.Equal((double)784, (double)pp.Calories); 
         }
 
+        /// <summary>
+        /// Cheacks to see if there is any special instructions for the chef 
+        /// </summary>
+        /// <param name="includeSirloin">Should the sirloin be removed or not</param>
+        /// <param name="includeOnion">Should the onion be removed or not</param>
+        /// <param name="includeRoll">Should the roll be removed or not</param>
         [Theory]
         [InlineData(true, true, true)]
         [InlineData(false, false, false)]
@@ -93,6 +125,9 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             else Assert.Empty(pp.SpecialInstructions);
         }
 
+        /// <summary>
+        /// Cheacks if it order in the recepit matches  
+        /// </summary>
         [Fact]
         public void ShouldReturnCorrectToString()
         {
