@@ -12,7 +12,7 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Class used to show price and calories for entrees
     /// </summary>
-    public class ThalmorTriple : Entree
+    public class ThalmorTriple : Entree, IOrderItem
     {
         /// <summary>
         /// Private varible that will called for Ketchup 

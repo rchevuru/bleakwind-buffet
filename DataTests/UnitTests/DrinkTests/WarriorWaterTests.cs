@@ -16,11 +16,17 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     /// </summary>
     public class WarriorWaterTests
     {
-
+        [Fact]
+        public void CheckInterfaceForDrink()
+        {
+            WarriorWater ww = new WarriorWater();
+            Assert.IsAssignableFrom<IOrderItem>(ww); 
+        }
         [Fact]
         public void ShouldBeADrink()
         {
-
+            WarriorWater ww = new WarriorWater();
+            Assert.IsAssignableFrom<Drink>(ww);
         }
         /// <summary>
         /// Sees if the dufault has ice 

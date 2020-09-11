@@ -12,7 +12,7 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Class used to show price and calories for entrees
     /// </summary>
-    public class DoubleDraugr : Entree
+    public class DoubleDraugr : Entree, IOrderItem
     {
         /// <summary>
         /// Private varible that will called for Ketchup 

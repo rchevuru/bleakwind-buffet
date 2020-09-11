@@ -12,7 +12,7 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Class used to show price and calories for entrees
     /// </summary>
-    public class PhillyPoacher : Entree
+    public class PhillyPoacher : Entree, IOrderItem
     {
         /// <summary>
         /// Private varible that will called for Sirloin 

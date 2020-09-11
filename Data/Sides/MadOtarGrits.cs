@@ -13,7 +13,7 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// Class used to show price and calories with sizes for sides 
     /// </summary>
-    public class MadOtarGrits : Side
+    public class MadOtarGrits : Side, IOrderItem
     {
         /// <summary>
         /// varible to get size from enum

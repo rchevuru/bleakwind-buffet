@@ -14,7 +14,7 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// Class used to show price and calories with sizes for drinks 
     /// </summary>
-    public class MarkarthMilk : Drink
+    public class MarkarthMilk : Drink, IOrderItem
     {
         /// <summary>
         /// Private varible that will called for Ice 

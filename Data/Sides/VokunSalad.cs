@@ -15,7 +15,7 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// Class used to show price and calories with sizes for sides 
     /// </summary>
-    public class VokunSalad : Side
+    public class VokunSalad : Side, IOrderItem
     {
 
         /// <summary>

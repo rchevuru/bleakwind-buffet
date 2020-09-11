@@ -4,7 +4,7 @@
  * Purpose: Test the MadOtarGrits.cs class in the Data library
  */
 using Xunit;
-
+using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Sides;
 using BleakwindBuffet.Data.Enums;
 
@@ -12,6 +12,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class MadOtarGritsTests
     {
+        [Fact]
+        public void CheckInterfaceForSide()
+        {
+            MadOtarGrits mog = new MadOtarGrits();
+            Assert.IsAssignableFrom<IOrderItem>(mog); 
+        }
         [Fact]
         public void ShouldBeASide()
         {

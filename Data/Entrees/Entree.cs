@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
-    public abstract class Entree
+    public abstract class Entree : IOrderItem
     {
         /// <summary>
         /// The price of the entree
