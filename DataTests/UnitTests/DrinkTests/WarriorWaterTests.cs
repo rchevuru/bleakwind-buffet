@@ -16,6 +16,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     /// </summary>
     public class WarriorWaterTests
     {
+
+        [Fact]
+        public void ShouldBeADrink()
+        {
+
+        }
         /// <summary>
         /// Sees if the dufault has ice 
         /// </summary>

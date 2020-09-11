@@ -53,7 +53,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         public void ShouldInlcudeCheddarByDefault()
         {
             GardenOrcOmelette goo = new GardenOrcOmelette();
-            Assert.True(goo.Chedder);
+            Assert.True(goo.Cheddar);
         }
 
         /// <summary>
@@ -102,10 +102,10 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         public void ShouldBeAbleToSetCheddar()
         {
             GardenOrcOmelette goo = new GardenOrcOmelette();
-            goo.Chedder = false;
-            Assert.False(goo.Chedder);
-            goo.Chedder = true;
-            Assert.True(goo.Chedder);
+            goo.Cheddar = false;
+            Assert.False(goo.Cheddar);
+            goo.Cheddar = true;
+            Assert.True(goo.Cheddar);
         }
 
         /// <summary>
@@ -145,11 +145,11 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             goo.Broccoli = includeBroccoli;
             goo.Mushrooms = includeMushrooms;
             goo.Tomato = includeTomato;
-            goo.Chedder = includeCheddar; 
+            goo.Cheddar = includeCheddar; 
             if (!includeBroccoli) Assert.Contains("Hold broccoli", goo.SpecialInstructions);
             if (!includeMushrooms) Assert.Contains("Hold mushrooms", goo.SpecialInstructions);
             if (!includeTomato) Assert.Contains("Hold tomato", goo.SpecialInstructions);
-            if (!includeCheddar) Assert.Contains("Hold chedder", goo.SpecialInstructions);
+            if (!includeCheddar) Assert.Contains("Hold cheddar", goo.SpecialInstructions);
             else Assert.Empty(goo.SpecialInstructions); 
         }
 

@@ -119,7 +119,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             pp.Sirloin = includeSirloin;
             pp.Onion = includeOnion;
             pp.Roll = includeRoll;
-            if (!includeSirloin) Assert.Contains("Hold sirlion", pp.SpecialInstructions);
+            if (!includeSirloin) Assert.Contains("Hold sirloin", pp.SpecialInstructions);
             if (!includeOnion) Assert.Contains("Hold onion", pp.SpecialInstructions);
             if (!includeRoll) Assert.Contains("Hold roll", pp.SpecialInstructions);
             else Assert.Empty(pp.SpecialInstructions);

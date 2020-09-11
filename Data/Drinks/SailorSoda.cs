@@ -14,7 +14,7 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// Class used to show price and calories with sizes for drinks 
     /// </summary>
-    public class SailorSoda
+    public class SailorSoda : Drink
     {
         /// <summary>
         /// Private varible that will called for Ice 
@@ -43,7 +43,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// gets and sets size
         /// </summary>
-        public Size Size
+        public override Size Size
         {
             get => size;
             set => size = value; 
@@ -63,7 +63,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// </summary>
         /// <exception>returns 0 if the other values did not return</exception>
         /// <return>The price</return>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -83,7 +83,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// </summary>
         /// <exception>returns 0 if the other values did not return </exception>
         /// <return>the calories</return>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -102,7 +102,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// Prints any special instructions
         /// </summary>
         /// <return>Instruction for chef</return>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

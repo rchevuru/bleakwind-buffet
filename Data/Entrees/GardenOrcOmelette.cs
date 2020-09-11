@@ -32,7 +32,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Private varible that will called for Chedder 
         /// </summary>
-        private bool chedder = true;
+        private bool cheddar = true;
 
         /// <summary>
         /// Gets the price of the omelette
@@ -74,10 +74,10 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets and sets chedder
         /// </summary>
-        public bool Chedder
+        public bool Cheddar
         {
-            get => chedder;
-            set => chedder = value;
+            get => cheddar;
+            set => cheddar = value;
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace BleakwindBuffet.Data.Entrees
                 if (!Broccoli) instructions.Add("Hold broccoli");
                 if (!Mushrooms) instructions.Add("Hold mushrooms");
                 if (!Tomato) instructions.Add("Hold tomato");
-                if (!Chedder) instructions.Add("Hold chedder");
+                if (!Cheddar) instructions.Add("Hold cheddar");
                 return instructions;
             }
         }

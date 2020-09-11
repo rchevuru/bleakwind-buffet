@@ -13,7 +13,7 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// Class used to show price and calories with sizes for drinks 
     /// </summary>
-    public class WarriorWater
+    public class WarriorWater : Drink
     {
         /// <summary>
         /// Private varible that will called for Ice 
@@ -61,7 +61,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// Gets the price of water
         /// </summary>
         /// <exception>Returns 1 if non of other prices not return correctly</exception>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -81,7 +81,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// Gets the calories of water
         /// </summary>
         ///  /// <exception>Returns 1 if non of other calories not return correctly</exception>
-        public uint Calories 
+        public override uint Calories 
         {
             get
             {
@@ -102,7 +102,7 @@ namespace BleakwindBuffet.Data.Drinks
     /// Prints any special instructions
     /// </summary>
     /// <return>the Spcial instruction for chef</return>
-    public List<string> SpecialInstructions
+    public override List<string> SpecialInstructions
         {
             get
             {
