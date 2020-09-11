@@ -4,12 +4,40 @@ using System.Text;
 using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Drinks;
-using BleakwindBuffet.Data.Enums; 
+using BleakwindBuffet.Data.Entrees;
+using BleakwindBuffet.Data.Sides; 
+using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.DataTests.UnitTests
 {
     public class MenuTests
     {
+        [Fact]
+        public void CheckMenuClassForEntrees()
+        {
+            List<IOrderItem> list = (List<IOrderItem>)Menu.Entrees();
+            Assert.Collection(list,
+               item => {Assert.IsType<BriarheartBurger>(item); },
+               item => {Assert.IsType<DoubleDraugr>(item); },
+               item => {Assert.IsType<GardenOrcOmelette>(item); },
+               item => {Assert.IsType<PhillyPoacher>(item); },
+               item => {Assert.IsType<SmokehouseSkeleton>(item);},
+               item => {Assert.IsType<ThalmorTriple>(item);},
+               item => {Assert.IsType<ThugsTBone>(item);}
+            );  
+        }
+
+        public void CheckMenuClassForSides()
+        {
+            List<IOrderItem> list = (List<IOrderItem>)Menu.Sides();
+            Assert.Collection(list,
+                item => {
+                    Assert.IsType<DragonbornWaffleFries>(item);
+                    Assert.Equal(Size.Small, ((DragonbornWaffleFries)item).Size); 
+                },
+                ); 
+        }
+
         [Fact]
         public void CheckMenuClassForDrinks()
         {
