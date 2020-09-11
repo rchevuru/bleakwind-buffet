@@ -13,7 +13,7 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Class used to show price and calories for entrees
     /// </summary>
-    public class GardenOrcOmelette
+    public class GardenOrcOmelette : Entree
     {
         /// <summary>
         /// Private varible that will called for Broccoli 
@@ -37,12 +37,12 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets the price of the omelette
         /// </summary>
-        public double Price => 4.57;
+        public override double Price => 4.57;
 
         /// <summary>
         /// Gets the calories of the omelette
         /// </summary>
-        public uint Calories => 404;
+        public override uint Calories => 404;
 
         /// <summary>
         /// Gets and sets broccoli
@@ -84,7 +84,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// Prints any special instructions
         /// </summary>
         /// <return>The instructions of chef</return>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

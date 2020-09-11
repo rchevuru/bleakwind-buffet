@@ -12,7 +12,7 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Class used to show price and calories for entrees
     /// </summary>
-    public class SmokehouseSkeleton
+    public class SmokehouseSkeleton : Entree
     {
         /// <summary>
         /// Private varible that will called for SausageLink 
@@ -37,12 +37,12 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets the price of the breakfast combo
         /// </summary>
-        public double Price => 5.62;
+        public override double Price => 5.62;
 
         /// <summary>
         /// Gets the calories of the breakfast combo
         /// </summary>
-        public uint Calories => 602;
+        public override uint Calories => 602;
 
         /// <summary>
         /// Gets and sets sausageLink; 
@@ -84,7 +84,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// Prints any special instructions
         /// </summary>
         /// <return>instruction for guest</return>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

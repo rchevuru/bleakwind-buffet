@@ -12,7 +12,7 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Class used to show price and calories for entrees
     /// </summary>
-    public class DoubleDraugr
+    public class DoubleDraugr : Entree
     {
         /// <summary>
         /// Private varible that will called for Ketchup 
@@ -57,12 +57,12 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets the price of the burger
         /// </summary>
-        public double Price => 7.32;
+        public override double Price => 7.32;
 
         /// <summary>
         /// Gets the calories of the burger 
         /// </summary>
-        public uint Calories => 843;
+        public override uint Calories => 843;
 
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// Prints any special instructions
         /// </summary>
         /// <return>the instructions for chef</return>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

@@ -9,13 +9,18 @@ using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees; 
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
-{
+{ 
     /// <summary>
     /// Test the ThugsTBone.cs class
     /// </summary>
     public class ThugsTBoneTests
     {
-
+        [Fact]
+        public void ShouldBeAEntree()
+        {
+            ThugsTBone ttb = new ThugsTBone();
+            Assert.IsAssignableFrom<Entree>(ttb);
+        }
         /// <summary>
         /// Cheacks to see if price is correct 
         /// </summary>

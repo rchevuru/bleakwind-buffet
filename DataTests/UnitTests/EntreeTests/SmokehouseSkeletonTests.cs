@@ -15,10 +15,17 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
     /// </summary>
     public class SmokehouseSkeletonTests
     {
+        [Fact]
+        public void ShouldBeAEntree()
+        {
+            SmokehouseSkeleton shs = new SmokehouseSkeleton();
+            Assert.IsAssignableFrom<Entree>(shs); 
+        }
 
         /// <summary>
         /// Cheaks to see if burger has SausageLink by default 
         /// </summary>
+        [Fact]
         public void ShouldInlcudeSausageByDefault()
         {
             SmokehouseSkeleton shs = new SmokehouseSkeleton();

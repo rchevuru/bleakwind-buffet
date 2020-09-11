@@ -15,6 +15,13 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
     /// </summary>
     public class PhillyPoacherTests
     {
+        [Fact]
+        public void ShouldBeAEntree()
+        {
+            PhillyPoacher pp = new PhillyPoacher();
+            Assert.IsAssignableFrom<Entree>(pp);
+        }
+
         /// <summary>
         /// Cheaks to see if burger has Sirlion by default 
         /// </summary>

@@ -15,6 +15,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 /// </summary>
     public class DoubleDraugrTests
     {
+        [Fact]
+        public void ShouldBeAEntree()
+        {
+            DoubleDraugr dd = new DoubleDraugr();
+            Assert.IsAssignableFrom<Entree>(dd); 
+        }
         /// <summary>
         /// Cheaks to see if burger has Bun by default 
         /// </summary>

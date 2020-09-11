@@ -51,7 +51,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Gets and sets size
         /// </summary>
-        public Size Size
+        public override Size Size
         {
             get => size;
             set => size = value;

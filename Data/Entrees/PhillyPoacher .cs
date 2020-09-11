@@ -12,7 +12,7 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// Class used to show price and calories for entrees
     /// </summary>
-    public class PhillyPoacher
+    public class PhillyPoacher : Entree
     {
         /// <summary>
         /// Private varible that will called for Sirloin 
@@ -32,12 +32,12 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets the price of the sandwich
         /// </summary>
-        public double Price => 7.23;
+        public override double Price => 7.23;
 
         /// <summary>
         /// Gets the calories of the sandwich
         /// </summary>
-        public uint Calories => 784;
+        public override uint Calories => 784;
 
         /// <summary>
         /// Gets and sets sirloin
@@ -70,7 +70,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// Prints any special instructions
         /// </summary>
         /// <return>The instruction for chef</return>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
