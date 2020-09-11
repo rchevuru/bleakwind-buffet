@@ -12,6 +12,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class FriedMiraakTests
     {
+        [Fact]
+        public void ShouldBeASide()
+        {
+            FriedMiraak fm = new FriedMiraak();
+            Assert.IsAssignableFrom<Side>(fm); 
+        }
         /// <summary>
         /// Cheacks to see the defult size of the container is zero. 
         /// </summary>

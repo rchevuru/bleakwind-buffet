@@ -12,6 +12,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class MadOtarGritsTests
     {
+        [Fact]
+        public void ShouldBeASide()
+        {
+            MadOtarGrits mog = new MadOtarGrits();
+            Assert.IsAssignableFrom<Side>(mog); 
+        }
         /// <summary>
         /// Cheacks to see the defult size of the container is zero. 
         /// </summary>

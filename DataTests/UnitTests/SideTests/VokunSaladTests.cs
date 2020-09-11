@@ -12,6 +12,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class VokunSaladTests
     {
+        [Fact]
+        public void ShouldBeASide()
+        {
+            VokunSalad vs = new VokunSalad();
+            Assert.IsAssignableFrom<Side>(vs); 
+        }
         /// <summary>
         /// Cheacks to see the defult size of the container is zero. 
         /// </summary>

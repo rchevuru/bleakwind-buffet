@@ -16,6 +16,12 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
     /// </summary>
     public class DragonbornWaffleFriesTests
     {
+        [Fact]
+        public void ShouldBeASide()
+        {
+            DragonbornWaffleFries dwf = new DragonbornWaffleFries();
+            Assert.IsAssignableFrom<Side>(dwf); 
+        }
         /// <summary>
         /// Cheacks to see the defult size of the container is zero. 
         /// </summary>
