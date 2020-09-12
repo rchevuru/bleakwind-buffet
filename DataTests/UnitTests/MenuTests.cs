@@ -27,6 +27,7 @@ namespace BleakwindBuffet.DataTests.UnitTests
             );  
         }
 
+        [Fact]
         public void CheckMenuClassForSides()
         {
             List<IOrderItem> list = (List<IOrderItem>)Menu.Sides();
@@ -35,6 +36,59 @@ namespace BleakwindBuffet.DataTests.UnitTests
                     Assert.IsType<DragonbornWaffleFries>(item);
                     Assert.Equal(Size.Small, ((DragonbornWaffleFries)item).Size); 
                 },
+                item =>
+                {
+                    Assert.IsType<FriedMiraak>(item);
+                    Assert.Equal(Size.Small, ((FriedMiraak)item).Size);
+                },
+                item =>
+                {
+                    Assert.IsType<MadOtarGrits>(item);
+                    Assert.Equal(Size.Small, ((MadOtarGrits)item).Size);
+                },
+                item =>
+                {
+                    Assert.IsType<VokunSalad>(item);
+                    Assert.Equal(Size.Small, ((VokunSalad)item).Size);
+                },
+                item => {
+                    Assert.IsType<DragonbornWaffleFries>(item);
+                    Assert.Equal(Size.Medium, ((DragonbornWaffleFries)item).Size);
+                },
+                item =>
+                {
+                    Assert.IsType<FriedMiraak>(item);
+                    Assert.Equal(Size.Medium, ((FriedMiraak)item).Size);
+                },
+                item =>
+                {
+                    Assert.IsType<MadOtarGrits>(item);
+                    Assert.Equal(Size.Medium, ((MadOtarGrits)item).Size);
+                },
+                item =>
+                {
+                    Assert.IsType<VokunSalad>(item);
+                    Assert.Equal(Size.Medium, ((VokunSalad)item).Size);
+                },
+                 item => {
+                     Assert.IsType<DragonbornWaffleFries>(item);
+                     Assert.Equal(Size.Large, ((DragonbornWaffleFries)item).Size);
+                 },
+                  item =>
+                  {
+                      Assert.IsType<FriedMiraak>(item);
+                      Assert.Equal(Size.Large, ((FriedMiraak)item).Size);
+                  },
+                  item =>
+                  {
+                      Assert.IsType<MadOtarGrits>(item);
+                      Assert.Equal(Size.Large, ((MadOtarGrits)item).Size);
+                  },
+                  item =>
+                  {
+                      Assert.IsType<VokunSalad>(item);
+                      Assert.Equal(Size.Large, ((VokunSalad)item).Size);
+                  }
                 ); 
         }
 
