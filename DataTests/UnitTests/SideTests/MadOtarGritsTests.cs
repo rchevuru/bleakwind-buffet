@@ -12,12 +12,19 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class MadOtarGritsTests
     {
+        /// <summary>
+        /// Checks if interface works 
+        /// </summary>
         [Fact]
         public void CheckInterfaceForSide()
         {
             MadOtarGrits mog = new MadOtarGrits();
             Assert.IsAssignableFrom<IOrderItem>(mog); 
         }
+
+        /// <summary>
+        /// Checks if base works 
+        /// </summary>
         [Fact]
         public void ShouldBeASide()
         {

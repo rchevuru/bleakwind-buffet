@@ -1,7 +1,7 @@
 ﻿/*
  * Author: Rana Chevuru 
  * Class name: VokunSalad.cs
- * Purpose: Class used to show price and calories with sizes for sides 
+ * Purpose: Class used to show price and calories with sizes for sides using a base and interface
  */
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ using BleakwindBuffet.Data.Enums;
 namespace BleakwindBuffet.Data.Sides
 {
     /// <summary>
-    /// Class used to show price and calories with sizes for sides 
+    /// Class used to show price and calories with sizes for sides using a base and interface
     /// </summary>
     public class VokunSalad : Side, IOrderItem
     {

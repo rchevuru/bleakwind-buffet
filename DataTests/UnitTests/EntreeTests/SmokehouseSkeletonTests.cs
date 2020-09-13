@@ -15,12 +15,19 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
     /// </summary>
     public class SmokehouseSkeletonTests
     {
+        /// <summary>
+        /// Checks if interface works 
+        /// </summary>
         [Fact]
         public void CheckInterfaceForEntree()
         {
             SmokehouseSkeleton shs = new SmokehouseSkeleton();
             Assert.IsAssignableFrom<IOrderItem>(shs); 
         }
+
+        /// <summary>
+        /// Checks if base works 
+        /// </summary>
         [Fact]
         public void ShouldBeAEntree()
         {

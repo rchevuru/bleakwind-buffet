@@ -16,12 +16,19 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     /// </summary>
     public class MarkarthMilkTests
     {
+        /// <summary>
+        /// Checks if interface works 
+        /// </summary>
         [Fact]
         public void CheckInterfaceForDrink()
         {
             MarkarthMilk mm = new MarkarthMilk();
             Assert.IsAssignableFrom<IOrderItem>(mm);
         }
+
+        /// <summary>
+        /// Checks if base works 
+        /// </summary>
         [Fact]
         public void ShouldBeADrink()
         {

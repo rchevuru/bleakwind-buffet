@@ -16,12 +16,19 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     /// </summary>
     public class WarriorWaterTests
     {
+        /// <summary>
+        /// Checks if interface works 
+        /// </summary>
         [Fact]
         public void CheckInterfaceForDrink()
         {
             WarriorWater ww = new WarriorWater();
             Assert.IsAssignableFrom<IOrderItem>(ww); 
         }
+
+        /// <summary>
+        /// Checks if base works 
+        /// </summary>
         [Fact]
         public void ShouldBeADrink()
         {

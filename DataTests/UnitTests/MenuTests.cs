@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru
+ * Class: MenuTests.cs
+ * Purpose: Test the Menu.cs class in the Data library
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
@@ -10,8 +15,14 @@ using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.DataTests.UnitTests
 {
+    /// <summary>
+    /// Test the Menu.cs class in the Data library
+    /// </summary>
     public class MenuTests
     {
+        /// <summary>
+        /// Checks if everything in entree initialized in Menu.cs  
+        /// </summary>
         [Fact]
         public void CheckMenuClassForEntrees()
         {
@@ -27,6 +38,9 @@ namespace BleakwindBuffet.DataTests.UnitTests
             );  
         }
 
+        /// <summary>
+        /// Checks if everything in sides initialized in Menu.cs  
+        /// </summary>
         [Fact]
         public void CheckMenuClassForSides()
         {
@@ -92,6 +106,9 @@ namespace BleakwindBuffet.DataTests.UnitTests
                 ); 
         }
 
+        /// <summary>
+        /// Checks if everything in drinks initialized in Menu.cs  
+        /// </summary>
         [Fact]
         public void CheckMenuClassForDrinks()
         {

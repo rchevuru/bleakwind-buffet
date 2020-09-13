@@ -15,12 +15,19 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
     /// </summary>
     public class ThalmorTripleTests
     {
+        /// <summary>
+        /// Checks if interface works 
+        /// </summary>
         [Fact]
         public void CheckInterfaceForEntree()
         {
             ThalmorTriple tt = new ThalmorTriple();
             Assert.IsAssignableFrom<IOrderItem>(tt); 
         }
+
+        /// <summary>
+        /// Checks if base works 
+        /// </summary>
         [Fact]
         public void ShouldBeAEntree()
         {

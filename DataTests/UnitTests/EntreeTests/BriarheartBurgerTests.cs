@@ -15,12 +15,19 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
     /// </summary>
     public class BriarheartBurgerTests
     {
+        /// <summary>
+        /// Checks if interface works 
+        /// </summary>
         [Fact]
         public void CheckInterfaceForEntree()
         {
             BriarheartBurger bhb = new BriarheartBurger();
             Assert.IsAssignableFrom<IOrderItem>(bhb); 
         }
+
+        /// <summary>
+        /// Checks if base works 
+        /// </summary>
         [Fact]
         public void ShouldBeAEntree()
         {

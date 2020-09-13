@@ -1,10 +1,18 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru 
+ * Class name: Side.cs
+ * Purpose:  A base class representing the common properties of Sides 
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums; 
 
 namespace BleakwindBuffet.Data.Sides
 {
+    /// <summary>
+    /// A base class representing the common properties of Sides 
+    /// </summary>
     public abstract class Side : IOrderItem
     {
         /// <summary>

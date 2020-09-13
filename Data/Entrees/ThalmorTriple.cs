@@ -1,7 +1,7 @@
 ﻿/*
  * Author: Rana Chevuru 
  * Class name: ThalmorTriple .cs
- * Purpose: Class used to show price and calories for entrees
+ * Purpose: Class used to show price and calories for entrees using a base and interface
  */
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ using System.Text;
 namespace BleakwindBuffet.Data.Entrees
 {
     /// <summary>
-    /// Class used to show price and calories for entrees
+    /// Class used to show price and calories for entrees using a base and interface
     /// </summary>
     public class ThalmorTriple : Entree, IOrderItem
     {

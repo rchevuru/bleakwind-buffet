@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru 
+ * Class name: Menu.cs
+ * Purpose:  A class representing the items to be sold 
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Drinks;
@@ -8,8 +13,15 @@ using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data
 {
+    /// <summary>
+    /// A class representing the items to be sold 
+    /// </summary>
     public static class Menu
     {
+        /// <summary>
+        /// Shows the diffrent entree choices 
+        /// </summary>
+        /// <returns>list of entree choices </returns>
         public static IEnumerable<IOrderItem> Entrees()
         {
             List<IOrderItem> enumerable = new List<IOrderItem>();
@@ -23,6 +35,10 @@ namespace BleakwindBuffet.Data
             return enumerable; 
         }
 
+        /// <summary>
+        /// Shows the diffrent side choices 
+        /// </summary>
+        /// <returns>list of side choices </returns>
         public static IEnumerable<IOrderItem> Sides()
         {
             List<IOrderItem> enumerable = new List<IOrderItem>();
@@ -36,6 +52,10 @@ namespace BleakwindBuffet.Data
             return enumerable; 
         }
 
+        /// <summary>
+        /// Shows the diffrent drink choices 
+        /// </summary>
+        /// <returns>list of drink choices </returns>
         public static IEnumerable<IOrderItem> Drinks()
         {
             List<IOrderItem> enumerable = new List<IOrderItem>();
@@ -53,6 +73,10 @@ namespace BleakwindBuffet.Data
             return enumerable; 
         }
 
+        /// <summary>
+        /// Adds all choices into one menu 
+        /// </summary>
+        /// <returns>all items to build menu</returns>
         public static IEnumerable<IOrderItem> FullMenu()
         {
             List<IOrderItem> enumerable = new List<IOrderItem>();

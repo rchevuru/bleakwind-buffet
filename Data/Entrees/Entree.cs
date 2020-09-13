@@ -1,9 +1,17 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru 
+ * Class name: Entree.cs
+ * Purpose:  A base class representing the common properties of Entrees 
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    ///  A base class representing the common properties of Entrees 
+    /// </summary>
     public abstract class Entree : IOrderItem
     {
         /// <summary>

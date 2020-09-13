@@ -16,12 +16,19 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     /// </summary>
     public class AretinoAppleJuiceTests
     {
+        /// <summary>
+        /// Checks if interface works 
+        /// </summary>
         [Fact]
         public void CheckInterfaceForDrink()
         {
             AretinoAppleJuice aj = new AretinoAppleJuice();
             Assert.IsAssignableFrom<IOrderItem>(aj); 
         }
+
+        /// <summary>
+        /// Checks if base works 
+        /// </summary>
         [Fact]
         public void ShouldBeADrink()
         {

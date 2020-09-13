@@ -12,12 +12,19 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class VokunSaladTests
     {
+        /// <summary>
+        /// Checks if interface works 
+        /// </summary>
         [Fact]
         public void CheckInterfaceForSide()
         {
             VokunSalad vs = new VokunSalad();
             Assert.IsAssignableFrom<IOrderItem>(vs); 
         }
+
+        /// <summary>
+        /// Checks if base works 
+        /// </summary>
         [Fact]
         public void ShouldBeASide()
         {

@@ -12,12 +12,19 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
     public class FriedMiraakTests
     {
+        /// <summary>
+        /// Checks if interface works 
+        /// </summary>
         [Fact]
         public void CheckInterfaceForSide()
         {
             FriedMiraak fm = new FriedMiraak();
             Assert.IsAssignableFrom<IOrderItem>(fm); 
         }
+
+        /// <summary>
+        /// Checks if base works 
+        /// </summary>
         [Fact]
         public void ShouldBeASide()
         {

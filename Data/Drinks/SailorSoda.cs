@@ -1,7 +1,7 @@
 ﻿/*
  * Author: Rana Chevuru 
  * Class name: SailorSoda.cs
- * Purpose: Class used to show price and calories with sizes for drinks 
+ * Purpose: Class used to show price and calories with sizes for drinks using a base and interface 
  */
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ using BleakwindBuffet.Data.Enums;
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
-    /// Class used to show price and calories with sizes for drinks 
+    /// Class used to show price and calories with sizes for drinks using a base and interface
     /// </summary>
     public class SailorSoda : Drink, IOrderItem
     {

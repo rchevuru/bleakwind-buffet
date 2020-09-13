@@ -1,9 +1,17 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru 
+ * Class name: IOrderItem .cs
+ * Purpose:  An interface class representing the common properties for the items/menu
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace BleakwindBuffet.Data
 {
+    /// <summary>
+    /// An interface class representing the common properties for the items/menu   
+    /// </summary>
     public interface IOrderItem
     {
         /// <summary>

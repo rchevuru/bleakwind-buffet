@@ -15,12 +15,19 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
     /// </summary>
     public class PhillyPoacherTests
     {
+        /// <summary>
+        /// Checks if interface works 
+        /// </summary>
         [Fact]
         public void CheckInterfaceForEntree()
         {
             PhillyPoacher pp = new PhillyPoacher();
             Assert.IsAssignableFrom<IOrderItem>(pp); 
         }
+
+        /// <summary>
+        /// Checks if base works 
+        /// </summary>
         [Fact]
         public void ShouldBeAEntree()
         {

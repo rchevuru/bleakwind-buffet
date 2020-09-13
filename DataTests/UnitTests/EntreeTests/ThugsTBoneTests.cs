@@ -15,12 +15,19 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
     /// </summary>
     public class ThugsTBoneTests
     {
+        /// <summary>
+        /// Checks if interface works 
+        /// </summary>
         [Fact]
         public void CheckInterfaceForEntree()
         {
             ThugsTBone ttb = new ThugsTBone();
             Assert.IsAssignableFrom<IOrderItem>(ttb); 
         }
+
+        /// <summary>
+        /// Checks if base works 
+        /// </summary>
         [Fact]
         public void ShouldBeAEntree()
         {

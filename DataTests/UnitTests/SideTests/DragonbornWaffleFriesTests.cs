@@ -16,12 +16,19 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
     /// </summary>
     public class DragonbornWaffleFriesTests
     {
+        /// <summary>
+        /// Checks if interface works 
+        /// </summary>
         [Fact]
         public void CheckInterfaceForSide()
         {
             DragonbornWaffleFries dwf = new DragonbornWaffleFries();
             Assert.IsAssignableFrom<IOrderItem>(dwf);
         }
+
+        /// <summary>
+        /// Checks if base works 
+        /// </summary>
         [Fact]
         public void ShouldBeASide()
         {

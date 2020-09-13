@@ -18,12 +18,19 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     /// </summary>
     public class SailorSodaTests
     {
+        /// <summary>
+        /// Checks if interface works 
+        /// </summary>
         [Fact]
         public void CheckInterfaceForDrink()
         {
             SailorSoda ss = new SailorSoda();
             Assert.IsAssignableFrom<IOrderItem>(ss); 
         }
+
+        /// <summary>
+        /// Checks if base works 
+        /// </summary>
         [Fact]
         public void ShouldBeADrink()
         {
