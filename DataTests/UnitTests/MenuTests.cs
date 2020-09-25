@@ -105,11 +105,25 @@ namespace BleakwindBuffet.DataTests.UnitTests
                   }
                 ); 
         }
-
-        /// <summary>
-        /// Checks if everything in drinks initialized in Menu.cs  
-        /// </summary>
         [Fact]
+        public void CheckMenuClassForFullMenu()
+        {
+            int numSize = Enum.GetValues(typeof(Size)).Length;
+            int numEntree = 7;
+            int numSides = 4;
+            int numDrinks = 5;
+
+            int numMenuItems = (numSides * numSize) + (numDrinks * numSize) + numSize;
+
+            IEnumerable<IOrderItem> FM = Menu.FullMenu();
+            List<IOrderItem> MenuItems = (List<IOrderItem>)FM;
+
+            Assert.Equal(MenuItems.Count, numMenuItems); 
+        }
+            /// <summary>
+            /// Checks if everything in drinks initialized in Menu.cs  
+            /// </summary>
+            [Fact]
         public void CheckMenuClassForDrinks()
         {
             List<IOrderItem> list = (List<IOrderItem>)Menu.Drinks();
