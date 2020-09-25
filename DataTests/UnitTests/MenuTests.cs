@@ -105,6 +105,10 @@ namespace BleakwindBuffet.DataTests.UnitTests
                   }
                 ); 
         }
+
+        /// <summary>
+        /// Checks if everything is intilazed in fullMenu.cs
+        /// </summary>
         [Fact]
         public void CheckMenuClassForFullMenu()
         {
@@ -113,7 +117,7 @@ namespace BleakwindBuffet.DataTests.UnitTests
             int numSides = 4;
             int numDrinks = 5;
 
-            int numMenuItems = (numSides * numSize) + (numDrinks * numSize) + numSize;
+            int numMenuItems = (numSides * numSize) + (numDrinks * numSize) + numEntree;
 
             IEnumerable<IOrderItem> FM = Menu.FullMenu();
             List<IOrderItem> MenuItems = (List<IOrderItem>)FM;
