@@ -18,7 +18,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Button Name="BriarheartButt" Click ="switchToBriarheartBurgerChoices" Height="60" Grid.Row="0" FontSize="20">Briarheart Burger</Button>
-        <Button Name="Draugr" Height="60" Grid.Row="1" FontSize="20">Double Draugr</Button>
+        <Button Name="Draugr" Click ="switchToDoubleDraugrChoices" Height="60" Grid.Row="1" FontSize="20">Double Draugr</Button>
         <Button Name="Omelette" Height="60" Grid.Row="2" FontSize="20">Garden Orc Omelette</Button>
         <Button Name="Poacher" Height="60" Grid.Row="3" FontSize="20">Philly Poacher</Button>
         <Button Name="Somkehouse" Height="60" Grid.Row="4" FontSize="20">Smokehouse Skeleton</Button>

@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PointOfSale.CustomBriarheartBurger"
+﻿<UserControl x:Class="PointOfSale.CustomDoubleDraugr"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -14,11 +14,14 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <CheckBox Grid.Row ="0" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2" ScaleY="2"/>
-            </CheckBox.LayoutTransform> 
+            </CheckBox.LayoutTransform>
             Bun
         </CheckBox>
         <CheckBox Grid.Row ="1" FontSize="20">
@@ -45,6 +48,24 @@
             </CheckBox.LayoutTransform>
             Cheese
         </CheckBox>
-        <Button Grid.Row="5" FontSize="20" Click="switchToEntreeChoices" FontWeight ="Black">Done</Button>
+        <CheckBox Grid.Row="5" FontSize="20">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"/>
+            </CheckBox.LayoutTransform>
+            Tomato
+        </CheckBox>
+        <CheckBox Grid.Row="6" FontSize="20">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"/>
+            </CheckBox.LayoutTransform>
+            Lettuce
+        </CheckBox>
+        <CheckBox Grid.Row="7" FontSize="20">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"/>
+            </CheckBox.LayoutTransform>
+            Mayo
+        </CheckBox>
+        <Button Grid.Row="8" FontSize="20" Click="switchToEntreeChoices" FontWeight ="Black">Done</Button>
     </Grid>
 </UserControl>

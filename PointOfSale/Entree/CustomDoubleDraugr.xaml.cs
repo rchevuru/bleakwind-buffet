@@ -14,15 +14,14 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for CustomBriarheartBurger.xaml
+    /// Interaction logic for CustomDoubleDraugr.xaml
     /// </summary>
-    public partial class CustomBriarheartBurger : UserControl
+    public partial class CustomDoubleDraugr : UserControl
     {
-        public CustomBriarheartBurger()
+        public CustomDoubleDraugr()
         {
             InitializeComponent();
         }
-
         void switchToEntreeChoices(object sender, RoutedEventArgs e)
         {
             var choices = new EntreeChoices();

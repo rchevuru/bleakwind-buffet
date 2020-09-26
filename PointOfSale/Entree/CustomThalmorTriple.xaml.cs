@@ -14,20 +14,13 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for CustomBriarheartBurger.xaml
+    /// Interaction logic for CustomThalmorTriple.xaml
     /// </summary>
-    public partial class CustomBriarheartBurger : UserControl
+    public partial class CustomThalmorTriple : UserControl
     {
-        public CustomBriarheartBurger()
+        public CustomThalmorTriple()
         {
             InitializeComponent();
-        }
-
-        void switchToEntreeChoices(object sender, RoutedEventArgs e)
-        {
-            var choices = new EntreeChoices();
-            var orderControl = this.FindAncestor<OrderControl>();
-            orderControl.SwitchMenuOrderScreen(choices);
         }
     }
 }

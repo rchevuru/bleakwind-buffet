@@ -29,6 +29,13 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(new EntreeChoices()); 
         }
+        /*
+        public void SwitchtoMenuOptionToDrink(object sender, RoutedEventArgs e)
+        {
+            var drink = new DrinkChoices();
+            var orderControl = this.FindAncestor<OrderControl>();
+            orderControl.SwitchMenuOrderScreen(drink);
+        }*/
     }
 
 }
