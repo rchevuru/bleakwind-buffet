@@ -14,28 +14,27 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for Menu.xaml
+    /// Interaction logic for SizesMarkarthMilk.xaml
     /// </summary>
-    public partial class Menu : UserControl
+    public partial class SizesMarkarthMilk : UserControl
     {
-        public Menu()
+        public SizesMarkarthMilk()
         {
             InitializeComponent();
         }
 
-        public void SwitchtoMenuOptiontoEntree(object sender, RoutedEventArgs e)
+        void switchToCustomMarkarthMilk(object sender, RoutedEventArgs e)
         {
-            //var entree = new EntreeChoices();
+            var cmm = new CustomMarkarthMilk();
             var orderControl = this.FindAncestor<OrderControl>();
-            orderControl.SwitchMenuOrderScreen(new EntreeChoices()); 
+            orderControl.SwitchMenuOrderScreen(cmm);
         }
-        
-        public void SwitchtoMenuOptionToDrink(object sender, RoutedEventArgs e)
+
+        void switchToDrinkChoices(object sender, RoutedEventArgs e)
         {
-            var drink = new DrinkChoices();
+            var choices = new DrinkChoices();
             var orderControl = this.FindAncestor<OrderControl>();
-            orderControl.SwitchMenuOrderScreen(drink);
+            orderControl.SwitchMenuOrderScreen(choices);
         }
     }
-
 }

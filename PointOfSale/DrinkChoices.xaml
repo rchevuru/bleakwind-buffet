@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="PointOfSale.DrinkChoices"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Name="AretinoAppleJuice"  Click ="switchToSizesforSizesForAretinoAppleJuice" Height="80" Grid.Row="0" FontSize="20">Aretino Apple Juice</Button>
+        <Button Name="CandlehearthCoffee" Click="switchToSizesforSizesForCandlehearthCoffee" Height="80" Grid.Row="1" FontSize="20">Candlehearth Coffee</Button>
+        <Button Name="MarkarthMilk"  Click="switchToSizesforSizesForMarkarthMilk" Height="80" Grid.Row="2" FontSize="20">Markarth Milk</Button>
+        <Button Name="SailorSoda" Height="80" Grid.Row="3" FontSize="20">Sailor Soda</Button>
+        <Button Name="WarriorWater"  Height="80" Grid.Row="4" FontSize="20">Warrior Water</Button>
+        <Button Name="BackBytt" Click ="goBackToMenu" Height="80" Grid.Row="7" FontSize="20" FontWeight="Black">Back</Button>
+    </Grid>
+</UserControl>

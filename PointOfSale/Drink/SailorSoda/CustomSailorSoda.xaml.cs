@@ -14,19 +14,20 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for CustomThalmorTriple.xaml
+    /// Interaction logic for CustomSailorSoda.xaml
     /// </summary>
-    public partial class CustomThalmorTriple : UserControl
+    public partial class CustomSailorSoda : UserControl
     {
-        public CustomThalmorTriple()
+        public CustomSailorSoda()
         {
             InitializeComponent();
         }
-        void switchToEntreeChoices(object sender, RoutedEventArgs e)
+
+        void switchToSizes(object sender, RoutedEventArgs e)
         {
-            var choices = new EntreeChoices();
+            var sizes = new SizesSailorSoda();
             var orderControl = this.FindAncestor<OrderControl>();
-            orderControl.SwitchMenuOrderScreen(choices);
+            orderControl.SwitchMenuOrderScreen(sizes);
         }
     }
 }

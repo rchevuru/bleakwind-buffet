@@ -14,28 +14,27 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for Menu.xaml
+    /// Interaction logic for FlavorSailorSoda.xaml
     /// </summary>
-    public partial class Menu : UserControl
+    public partial class FlavorSailorSoda : UserControl
     {
-        public Menu()
+        public FlavorSailorSoda()
         {
             InitializeComponent();
         }
 
-        public void SwitchtoMenuOptiontoEntree(object sender, RoutedEventArgs e)
+        void switchToSizes(object sender, RoutedEventArgs e)
         {
-            //var entree = new EntreeChoices();
+            var sizes = new SizesSailorSoda();
             var orderControl = this.FindAncestor<OrderControl>();
-            orderControl.SwitchMenuOrderScreen(new EntreeChoices()); 
+            orderControl.SwitchMenuOrderScreen(sizes);
         }
-        
-        public void SwitchtoMenuOptionToDrink(object sender, RoutedEventArgs e)
+
+        void switchToDrinkChoices(object sender, RoutedEventArgs e)
         {
-            var drink = new DrinkChoices();
+            var choices = new DrinkChoices();
             var orderControl = this.FindAncestor<OrderControl>();
-            orderControl.SwitchMenuOrderScreen(drink);
+            orderControl.SwitchMenuOrderScreen(choices);
         }
     }
-
 }
