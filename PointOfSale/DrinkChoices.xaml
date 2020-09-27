@@ -19,7 +19,7 @@
         <Button Name="CandlehearthCoffee" Click="switchToSizesforSizesForCandlehearthCoffee" Height="80" Grid.Row="1" FontSize="20">Candlehearth Coffee</Button>
         <Button Name="MarkarthMilk"  Click="switchToSizesforSizesForMarkarthMilk" Height="80" Grid.Row="2" FontSize="20">Markarth Milk</Button>
         <Button Name="SailorSoda" Click="switchToSizesforFlavorsForSailorSodak" Height="80" Grid.Row="3" FontSize="20">Sailor Soda</Button>
-        <Button Name="WarriorWater"  Height="80" Grid.Row="4" FontSize="20">Warrior Water</Button>
+        <Button Name="WarriorWater" Click="switchToSizesforSizesForWarriorWater" Height="80" Grid.Row="4" FontSize="20">Warrior Water</Button>
         <Button Name="BackBytt" Click ="goBackToMenu" Height="80" Grid.Row="7" FontSize="20" FontWeight="Black">Back</Button>
     </Grid>
 </UserControl>
