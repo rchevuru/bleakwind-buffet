@@ -32,30 +32,37 @@ namespace PointOfSale
         
         void switchToSizesforSizesForAretinoAppleJuice(object sender, RoutedEventArgs e)
         {
-            var customize = new SizesForAppleJuice();
+            var size = new SizesForAppleJuice();
             var orderControl = this.FindAncestor<OrderControl>();
-            orderControl.SwitchMenuOrderScreen(customize);
+            orderControl.SwitchMenuOrderScreen(size);
         }
 
         void switchToSizesforSizesForCandlehearthCoffee(object sender, RoutedEventArgs e)
         {
-            var customize = new SizesForCandlehearthCoffee();
+            var size = new SizesForCandlehearthCoffee();
             var orderControl = this.FindAncestor<OrderControl>();
-            orderControl.SwitchMenuOrderScreen(customize);
+            orderControl.SwitchMenuOrderScreen(size);
         }
 
         void switchToSizesforSizesForMarkarthMilk(object sender, RoutedEventArgs e)
         {
-            var customize = new SizesMarkarthMilk();
+            var size = new SizesMarkarthMilk();
             var orderControl = this.FindAncestor<OrderControl>();
-            orderControl.SwitchMenuOrderScreen(customize);
+            orderControl.SwitchMenuOrderScreen(size);
         }
 
         void switchToSizesforFlavorsForSailorSodak(object sender, RoutedEventArgs e)
         {
-            var customize = new FlavorSailorSoda();
+            var flavor = new FlavorSailorSoda();
             var orderControl = this.FindAncestor<OrderControl>();
-            orderControl.SwitchMenuOrderScreen(customize);
+            orderControl.SwitchMenuOrderScreen(flavor);
+        }
+
+        void switchToSizesforSizesForWarriorWater(object sender, RoutedEventArgs e)
+        {
+            var size = new SizesWarriorWater();
+            var orderControl = this.FindAncestor<OrderControl>();
+            orderControl.SwitchMenuOrderScreen(size);
         }
     }
 }
