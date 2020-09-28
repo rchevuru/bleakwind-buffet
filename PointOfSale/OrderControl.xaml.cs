@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru
+ * Class:OrderControl.xaml.cs
+ * Purpose: Displays the menu and order 
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -15,14 +20,23 @@ namespace PointOfSale
 {
     /// <summary>
     /// Interaction logic for OrderControl.xaml
+    /// Displays the menu and order 
     /// </summary>
     public partial class OrderControl : UserControl
     {
+        /// <summary>
+        ///  Initialize Component to make the buttons work 
+        /// </summary>
         public OrderControl()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Switches screens for menu 
+        /// </summary>
+        /// <param name="sender">the object we trying to implement the function</param>
+        /// <param name="e">the code that runs the function upon press</param>
         public void SwitchMenuOrderScreen(UIElement element)
         {
             menuChoice.Child = element; 

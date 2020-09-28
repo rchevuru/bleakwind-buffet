@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru
+ * Class:SidesChoices.xaml.cs  
+ * Purpose: Displays the side options
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -15,14 +20,23 @@ namespace PointOfSale
 {
     /// <summary>
     /// Interaction logic for SidesChoices.xaml
+    /// Displays the side options
     /// </summary>
     public partial class SidesChoices : UserControl
     {
+        /// <summary>
+        ///  Initialize Component to make the buttons work 
+        /// </summary>
         public SidesChoices()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Displays the sizes for DragonbornWaffleFries
+        /// </summary>
+        /// <param name="sender">the object we trying to implement the function</param>
+        /// <param name="e">the code that runs the function upon press</param>
         void switchToSizesforSizesForDragonbornWaffleFries(object sender, RoutedEventArgs e)
         {
             var size = new SizesForDragonbornWaffleFries();
@@ -30,6 +44,11 @@ namespace PointOfSale
             orderControl.SwitchMenuOrderScreen(size);
         }
 
+        /// <summary>
+        /// Displays the sizes for FriedMiraak
+        /// </summary>
+        /// <param name="sender">the object we trying to implement the function</param>
+        /// <param name="e">the code that runs the function upon press</param>
         void switchToSizesforSizesForFriedMiraak(object sender, RoutedEventArgs e)
         {
             var size = new SizesForFriedMiraak();
@@ -37,6 +56,11 @@ namespace PointOfSale
             orderControl.SwitchMenuOrderScreen(size);
         }
 
+        /// <summary>
+        /// Displays the sizes for MadOtarGrits
+        /// </summary>
+        /// <param name="sender">the object we trying to implement the function</param>
+        /// <param name="e">the code that runs the function upon press</param>
         void switchToSizesforSizesForMadOtarGrits(object sender, RoutedEventArgs e)
         {
             var size = new SizesForMadOtarGrits();
@@ -44,6 +68,11 @@ namespace PointOfSale
             orderControl.SwitchMenuOrderScreen(size);
         }
 
+        /// <summary>
+        /// Displays the sizes for VokunSalad
+        /// </summary>
+        /// <param name="sender">the object we trying to implement the function</param>
+        /// <param name="e">the code that runs the function upon press</param>
         void switchToSizesforSizesForVokunSalad(object sender, RoutedEventArgs e)
         {
             var size = new SizesForVokunSalad();
@@ -51,6 +80,11 @@ namespace PointOfSale
             orderControl.SwitchMenuOrderScreen(size);
         }
 
+        /// <summary>
+        /// Displays the menu choices
+        /// </summary>
+        /// <param name="sender">the object we trying to implement the function</param>
+        /// <param name="e">the code that runs the function upon press</param>
         void goBackToMenu(object sender, RoutedEventArgs e)
         {
             var menu = new Menu();

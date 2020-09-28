@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru
+ * Class:EntreeChoices.xaml.cs
+ * Purpose: Displays all entree choices  
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -15,14 +20,23 @@ namespace PointOfSale
 {
     /// <summary>
     /// Interaction logic for EntreeChoices.xaml
+    /// Displays all entree choices  
     /// </summary>
     public partial class EntreeChoices : UserControl
     {
+        /// <summary>
+        ///  Initialize Component to make the buttons work 
+        /// </summary>
         public EntreeChoices()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Displays the sizes for DragonbornWaffleFries
+        /// </summary>
+        /// <param name="sender">the object we trying to implement the function</param>
+        /// <param name="e">the code that runs the function upon press</param>
         void switchToBriarheartBurgerChoices(object sender, RoutedEventArgs e)
         {
             var customize = new CustomBriarheartBurger();

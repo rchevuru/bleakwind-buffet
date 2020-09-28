@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru
+ * Class:Order.xaml.cs
+ * Purpose: Displays the menu and order 
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -15,9 +20,13 @@ namespace PointOfSale
 {
     /// <summary>
     /// Interaction logic for Order.xaml
+    /// Displays the menu and order
     /// </summary>
     public partial class Order : UserControl
     {
+        /// <summary>
+        ///  Initialize Component to make the buttons work 
+        /// </summary>
         public Order()
         {
             InitializeComponent();

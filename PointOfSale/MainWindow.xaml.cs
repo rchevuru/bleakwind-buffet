@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru
+ * Class:MainWindow.xaml.cs
+ * Purpose: Calls to OrderControl for display 
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,9 +22,13 @@ namespace PointOfSale
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
+    /// Calls to OrderControl for display
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        ///  Initialize Component to make the buttons work 
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
