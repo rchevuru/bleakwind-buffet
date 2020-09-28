@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="PointOfSale.SidesChoices"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Name="DragonbornWaffleFries"  Click ="switchToSizesforSizesForDragonbornWaffleFries" Height="90" Grid.Row="0" FontSize="20">Dragonborn Waffle Fries</Button>
+        <Button Name="FriedMiraak" Click="switchToSizesforSizesForFriedMiraak" Height="90" Grid.Row="1" FontSize="20">Fried Miraak</Button>
+        <Button Name="MadOtarGrits"  Click="switchToSizesforSizesForMadOtarGrits" Height="90" Grid.Row="2" FontSize="20">Mad Otar Grits</Button>
+        <Button Name="VokunSalad" Click="switchToSizesforSizesForVokunSalad" Height="90" Grid.Row="3" FontSize="20">Vokun Salad</Button>
+        <Button Name="BackBytt" Click ="goBackToMenu" Height="90" Grid.Row="4" FontSize="20" FontWeight="Black">Back</Button>
+    </Grid>
+</UserControl>

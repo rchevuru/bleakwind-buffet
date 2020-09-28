@@ -14,46 +14,39 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for DrinkChoices.xaml
+    /// Interaction logic for SidesChoices.xaml
     /// </summary>
-    public partial class DrinkChoices : UserControl
+    public partial class SidesChoices : UserControl
     {
-        public DrinkChoices()
+        public SidesChoices()
         {
             InitializeComponent();
         }
-                        
-        void switchToSizesforSizesForAretinoAppleJuice(object sender, RoutedEventArgs e)
+
+        void switchToSizesforSizesForDragonbornWaffleFries(object sender, RoutedEventArgs e)
         {
-            var size = new SizesForAppleJuice();
+            var size = new SizesForDragonbornWaffleFries();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(size);
         }
 
-        void switchToSizesforSizesForCandlehearthCoffee(object sender, RoutedEventArgs e)
+        void switchToSizesforSizesForFriedMiraak(object sender, RoutedEventArgs e)
         {
-            var size = new SizesForCandlehearthCoffee();
+            var size = new SizesForFriedMiraak();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(size);
         }
 
-        void switchToSizesforSizesForMarkarthMilk(object sender, RoutedEventArgs e)
+        void switchToSizesforSizesForMadOtarGrits(object sender, RoutedEventArgs e)
         {
-            var size = new SizesMarkarthMilk();
+            var size = new SizesForMadOtarGrits();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(size);
         }
 
-        void switchToSizesforFlavorsForSailorSodak(object sender, RoutedEventArgs e)
+        void switchToSizesforSizesForVokunSalad(object sender, RoutedEventArgs e)
         {
-            var flavor = new FlavorSailorSoda();
-            var orderControl = this.FindAncestor<OrderControl>();
-            orderControl.SwitchMenuOrderScreen(flavor);
-        }
-
-        void switchToSizesforSizesForWarriorWater(object sender, RoutedEventArgs e)
-        {
-            var size = new SizesWarriorWater();
+            var size = new SizesForVokunSalad();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(size);
         }

@@ -14,20 +14,20 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for CustomWarriorWater.xaml
+    /// Interaction logic for SizesForDragonbornWaffleFries.xaml
     /// </summary>
-    public partial class CustomWarriorWater : UserControl
+    public partial class SizesForDragonbornWaffleFries : UserControl
     {
-        public CustomWarriorWater()
+        public SizesForDragonbornWaffleFries()
         {
             InitializeComponent();
         }
 
-        void switchToSizes(object sender, RoutedEventArgs e)
+        void switchToDrinkChoices(object sender, RoutedEventArgs e)
         {
-            var sizes = new SizesMarkarthMilk();
+            var choices = new SidesChoices();
             var orderControl = this.FindAncestor<OrderControl>();
-            orderControl.SwitchMenuOrderScreen(sizes);
+            orderControl.SwitchMenuOrderScreen(choices);
         }
     }
 }
