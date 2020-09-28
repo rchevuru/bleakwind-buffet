@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru
+ * Class:SizesSailorSoda.xaml.cs  
+ * Purpose: Displays the sizes for SailorSoda
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -15,14 +20,24 @@ namespace PointOfSale
 {
     /// <summary>
     /// Interaction logic for SizesSailorSoda.xaml
+    /// Displays the sizes for SailorSoda
     /// </summary>
     public partial class SizesSailorSoda : UserControl
     {
+
+        /// <summary>
+        ///  Initialize Component to make the buttons work 
+        /// </summary>
         public SizesSailorSoda()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Switchs to the SailorSoda  custombinations 
+        /// </summary>
+        /// <param name="sender">the object we trying to implement the function</param>
+        /// <param name="e">the code that runs the function upon press</param>
         void switchToCustomSailorSodaChoice(object sender, RoutedEventArgs e)
         {
             var css= new CustomSailorSoda();
@@ -30,6 +45,11 @@ namespace PointOfSale
             orderControl.SwitchMenuOrderScreen(css);
         }
 
+        /// <summary>
+        /// Goes back to the other flavor options 
+        /// </summary>
+        /// <param name="sender">the object we trying to implement the function</param>
+        /// <param name="e">the code that runs the function upon press</param>
         void switchToFlavorChoices(object sender, RoutedEventArgs e)
         {
             var flavor = new FlavorSailorSoda();

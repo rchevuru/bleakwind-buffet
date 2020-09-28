@@ -33,7 +33,7 @@ namespace PointOfSale
         }
 
         /// <summary>
-        /// Displays the sizes for DragonbornWaffleFries
+        /// Displays the BriarheartBurger custabinations
         /// </summary>
         /// <param name="sender">the object we trying to implement the function</param>
         /// <param name="e">the code that runs the function upon press</param>
@@ -44,6 +44,11 @@ namespace PointOfSale
             orderControl.SwitchMenuOrderScreen(customize);
         }
 
+        /// <summary>
+        /// Displays the DoubleDraugr custabinations
+        /// </summary>
+        /// <param name="sender">the object we trying to implement the function</param>
+        /// <param name="e">the code that runs the function upon press</param>
         void switchToDoubleDraugrChoices(object sender, RoutedEventArgs e)
         {
             var customize = new CustomDoubleDraugr();
@@ -51,6 +56,11 @@ namespace PointOfSale
             orderControl.SwitchMenuOrderScreen(customize);
         }
 
+        /// <summary>
+        /// Displays the GardenOrcOmelette custabinations
+        /// </summary>
+        /// <param name="sender">the object we trying to implement the function</param>
+        /// <param name="e">the code that runs the function upon press</param>
         void switchToGardenOrcOmelette(object sender, RoutedEventArgs e)
         {
             var customize = new GardenOrcOmelette();
@@ -58,6 +68,11 @@ namespace PointOfSale
             orderControl.SwitchMenuOrderScreen(customize);
         }
 
+        /// <summary>
+        /// Displays the PhillyPoacher custabinations
+        /// </summary>
+        /// <param name="sender">the object we trying to implement the function</param>
+        /// <param name="e">the code that runs the function upon press</param>
         void switchToPhillyPoacher(object sender, RoutedEventArgs e)
         {
             var customize = new CustomPhillyPoacher();
@@ -65,6 +80,11 @@ namespace PointOfSale
             orderControl.SwitchMenuOrderScreen(customize);
         }
 
+        /// <summary>
+        /// Displays the SokehouseSkeleton custabinations 
+        /// </summary>
+        /// <param name="sender">the object we trying to implement the function</param>
+        /// <param name="e">the code that runs the function upon press</param>
         void switchToSokehouseSkeleton(object sender, RoutedEventArgs e)
         {
             var customize = new CustomSokehouseSkeleton();
@@ -72,6 +92,11 @@ namespace PointOfSale
             orderControl.SwitchMenuOrderScreen(customize);
         }
 
+        /// <summary>
+        /// Displays the ThalmorTriple custabinations 
+        /// </summary>
+        /// <param name="sender">the object we trying to implement the function</param>
+        /// <param name="e">the code that runs the function upon press</param>
         void switchToThalmorTriple(object sender, RoutedEventArgs e)
         {
             var customize = new CustomThalmorTriple();
@@ -79,6 +104,11 @@ namespace PointOfSale
             orderControl.SwitchMenuOrderScreen(customize);
         }
 
+        /// <summary>
+        /// Displays the menu options 
+        /// </summary>
+        /// <param name="sender">the object we trying to implement the function</param>
+        /// <param name="e">the code that runs the function upon press</param>
         void goBackToMenu(object sender, RoutedEventArgs e)
         {
             var menu = new Menu();

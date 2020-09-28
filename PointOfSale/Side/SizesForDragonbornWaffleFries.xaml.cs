@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru
+ * Class:  SizesForDragonbornWaffleFries.xaml.cs  
+ * Purpose:Displays the sizes for DragonbornWaffleFries
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -15,14 +20,23 @@ namespace PointOfSale
 {
     /// <summary>
     /// Interaction logic for SizesForDragonbornWaffleFries.xaml
+    /// Displays the sizes for DragonbornWaffleFries
     /// </summary>
     public partial class SizesForDragonbornWaffleFries : UserControl
     {
+        /// <summary>
+        ///  Initialize Component to make the buttons work 
+        /// </summary>
         public SizesForDragonbornWaffleFries()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Goes back to the other side options 
+        /// </summary>
+        /// <param name="sender">the object we trying to implement the function</param>
+        /// <param name="e">the code that runs the function upon press</param>
         void switchToDrinkChoices(object sender, RoutedEventArgs e)
         {
             var choices = new SidesChoices();

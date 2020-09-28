@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Rana Chevuru
+ * Class:CustomWarriorWater.xaml.cs  
+ * Purpose: Displays the custombinations for WarriorWater
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -15,14 +20,23 @@ namespace PointOfSale
 {
     /// <summary>
     /// Interaction logic for CustomWarriorWater.xaml
+    /// Displays the custombinations for WarriorWater
     /// </summary>
     public partial class CustomWarriorWater : UserControl
     {
+        /// <summary>
+        ///  Initialize Component to make the buttons work 
+        /// </summary>
         public CustomWarriorWater()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Goes back to the other sizes for WarriorWater
+        /// </summary>
+        /// <param name="sender">the object we trying to implement the function</param>
+        /// <param name="e">the code that runs the function upon press</param>
         void switchToSizes(object sender, RoutedEventArgs e)
         {
             var sizes = new SizesMarkarthMilk();
