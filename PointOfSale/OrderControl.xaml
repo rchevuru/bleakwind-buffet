@@ -12,8 +12,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Border x:Name="summeryOrder" Grid.Column="1">
-            <local:Order>
-            </local:Order> 
+            <local:Order></local:Order>
         </Border>
         <Border x:Name= "menuChoice" Grid.Column="0">
             <local:Menu></local:Menu>

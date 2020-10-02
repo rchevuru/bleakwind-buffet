@@ -17,6 +17,6 @@
             </CheckBox.LayoutTransform>
             Ice
         </CheckBox>
-        <Button Grid.Row="5" FontSize="50" Click="switchToSizes" FontWeight ="Black">Done</Button>
+        <Button Grid.Row="5" FontSize="50" Click="switchToSizes" FontWeight ="Black">Back</Button>
     </Grid>
 </UserControl>

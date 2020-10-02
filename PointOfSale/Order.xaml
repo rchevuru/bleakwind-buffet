@@ -29,6 +29,6 @@
             <TextBlock Grid.Row ="3" DockPanel.Dock="Bottom" FontWeight="Black" TextAlignment="Right" FontSize="18">
             Subtotal:
             </TextBlock>
-        </DockPanel>
+        </DockPanel> 
    </Grid>
 </UserControl>
