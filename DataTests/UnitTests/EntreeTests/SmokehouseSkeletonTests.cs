@@ -18,6 +18,82 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
     /// </summary>
     public class SmokehouseSkeletonTests
     {
+        // <summary>
+        /// Checks if the SausageLink property is changed 
+        /// </summary>
+        [Fact]
+        public void ChangingSausageLinkNotifiesSausageLinkProperty()
+        {
+            var shs = new SmokehouseSkeleton();
+
+            Assert.PropertyChanged(shs, "SausageLink", () =>
+            {
+                shs.SausageLink = true;
+            });
+
+            Assert.PropertyChanged(shs, "SausageLink", () =>
+            {
+                shs.SausageLink = false;
+            });
+        }
+
+        // <summary>
+        /// Checks if the Egg property is changed 
+        /// </summary>
+        [Fact]
+        public void ChangingEggNotifiesEggProperty()
+        {
+            var shs = new SmokehouseSkeleton();
+
+            Assert.PropertyChanged(shs, "Egg", () =>
+            {
+                shs.Egg = true;
+            });
+
+            Assert.PropertyChanged(shs, "Egg", () =>
+            {
+                shs.Egg = false;
+            });
+        }
+
+        // <summary>
+        /// Checks if the HashBrowns property is changed 
+        /// </summary>
+        [Fact]
+        public void ChangingHashBrownsNotifiesHashBrownsProperty()
+        {
+            var shs = new SmokehouseSkeleton();
+
+            Assert.PropertyChanged(shs, "HashBrowns", () =>
+            {
+                shs.HashBrowns = true;
+            });
+
+            Assert.PropertyChanged(shs, "HashBrowns", () =>
+            {
+                shs.HashBrowns = false;
+            });
+        }
+
+        // <summary>
+        /// Checks if the Pancake property is changed 
+        /// </summary>
+        [Fact]
+        public void ChangingPancakeNotifiesPancakeProperty()
+        {
+            var shs = new SmokehouseSkeleton();
+
+            Assert.PropertyChanged(shs, "Pancake", () =>
+            {
+                shs.Pancake = true;
+            });
+
+            Assert.PropertyChanged(shs, "Pancake", () =>
+            {
+                shs.Pancake = false;
+            });
+        }
+
         /// <summary>
         /// Checks if INotifyPropertyChanged interface works 
         /// </summary>

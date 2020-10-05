@@ -19,6 +19,83 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
     public class GardenOrcOmeletteTests
     {
         /// <summary>
+        /// Checks if the Broccoli property is changed 
+        /// </summary>
+        [Fact]
+        public void ChangingBroccoliNotifiesBroccoliProperty()
+        {
+            var dd = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(dd, "Broccoli", () =>
+            {
+                dd.Broccoli = true;
+            });
+
+            Assert.PropertyChanged(dd, "Broccoli", () =>
+            {
+                dd.Broccoli = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if the Mushrooms property is changed 
+        /// </summary>
+        [Fact]
+        public void ChangingMushroomsNotifiesMushroomsProperty()
+        {
+            var dd = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(dd, "Mushrooms", () =>
+            {
+                dd.Mushrooms = true;
+            });
+
+            Assert.PropertyChanged(dd, "Mushrooms", () =>
+            {
+                dd.Mushrooms = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if the Tomato property is changed 
+        /// </summary>
+        [Fact]
+        public void ChangingTomatoNotifiesTomatoProperty()
+        {
+            var dd = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(dd, "Tomato", () =>
+            {
+                dd.Tomato = true;
+            });
+
+            Assert.PropertyChanged(dd, "Tomato", () =>
+            {
+                dd.Tomato = false;
+            });
+        }
+
+
+        /// <summary>
+        /// Checks if the Cheddar property is changed 
+        /// </summary>
+        [Fact]
+        public void ChangingCheddarNotifiesCheddarProperty()
+        {
+            var dd = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(dd, "Cheddar", () =>
+            {
+                dd.Cheddar = true;
+            });
+
+            Assert.PropertyChanged(dd, "Cheddar", () =>
+            {
+                dd.Cheddar = false;
+            });
+        }
+
+        /// <summary>
         /// Checks if INotifyPropertyChanged interface works 
         /// </summary>
         [Fact]

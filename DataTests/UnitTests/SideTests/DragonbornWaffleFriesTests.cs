@@ -20,6 +20,25 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
     public class DragonbornWaffleFriesTests
     {
         /// <summary>
+        /// Checks if the Size property is changed 
+        /// </summary>
+        /// <param name="size">Size of cotainer</param>
+        [Theory]
+        [InlineData(Size.Large)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Small)]
+
+        public void ChangingSizeNotifiesSizeProperty(Size size)
+        {
+            var dwf = new DragonbornWaffleFries();
+
+            Assert.PropertyChanged(dwf, "Size", () =>
+            {
+                dwf.Size = size;
+            });
+        }
+
+        /// <summary>
         /// Checks if INotifyPropertyChanged interface works 
         /// </summary>
         [Fact]

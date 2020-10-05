@@ -10,10 +10,10 @@ using BleakwindBuffet.Data.Entrees;
 using System.ComponentModel; 
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
-
-{/// <summary>
-/// Test the DoubleDraugr.cs class
-/// </summary>
+{
+    /// <summary>
+    /// Test the DoubleDraugr.cs class
+    /// </summary>
     public class DoubleDraugrTests
     {
         /// <summary>
@@ -138,14 +138,14 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         {
             var dd = new DoubleDraugr();
 
-            Assert.PropertyChanged(dd, "Tomato", () =>
+            Assert.PropertyChanged(dd, "Lettuce", () =>
             {
-                dd.Tomato = true;
+                dd.Lettuce = true;
             });
 
-            Assert.PropertyChanged(dd, "Tomato", () =>
+            Assert.PropertyChanged(dd, "Lettuce", () =>
             {
-                dd.Tomato = false;
+                dd.Lettuce = false;
             });
         }
 

@@ -19,6 +19,63 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
     public class PhillyPoacherTests
     {
         /// <summary>
+        /// Checks if the Sirloin property is changed 
+        /// </summary>
+        [Fact]
+        public void ChangingSirloinNotifiesSirloinProperty()
+        {
+            var dd = new PhillyPoacher();
+
+            Assert.PropertyChanged(dd, "Sirloin", () =>
+            {
+                dd.Sirloin = true;
+            });
+
+            Assert.PropertyChanged(dd, "Sirloin", () =>
+            {
+                dd.Sirloin = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if the Onion property is changed 
+        /// </summary>
+        [Fact]
+        public void ChangingOnionNotifiesOnionProperty()
+        {
+            var dd = new PhillyPoacher();
+
+            Assert.PropertyChanged(dd, "Onion", () =>
+            {
+                dd.Onion = true;
+            });
+
+            Assert.PropertyChanged(dd, "Onion", () =>
+            {
+                dd.Onion = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if the Roll property is changed 
+        /// </summary>
+        [Fact]
+        public void ChangingRollNotifiesRollProperty()
+        {
+            var dd = new PhillyPoacher();
+
+            Assert.PropertyChanged(dd, "Roll", () =>
+            {
+                dd.Roll = true;
+            });
+
+            Assert.PropertyChanged(dd, "Roll", () =>
+            {
+                dd.Roll = false;
+            });
+        }
+
+        /// <summary>
         /// Checks if INotifyPropertyChanged interface works 
         /// </summary>
         [Fact]
