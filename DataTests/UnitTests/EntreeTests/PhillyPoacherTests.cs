@@ -2,11 +2,14 @@
  * Author: Zachery Brunner
  * Class: PhillyPoacherTests.cs
  * Purpose: Test the PhillyPoacher.cs class in the Data library
+ * Date Modified: 10/5/2020
+ * Modifier: Rana Chevuru
  */
 using Xunit;
 
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Entrees;
+using System.ComponentModel; 
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
@@ -15,6 +18,15 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
     /// </summary>
     public class PhillyPoacherTests
     {
+        /// <summary>
+        /// Checks if INotifyPropertyChanged interface works 
+        /// </summary>
+        [Fact]
+        public void CheckINotifyPropertyChanged()
+        {
+            PhillyPoacher pp = new PhillyPoacher();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(pp);
+        }
         /// <summary>
         /// Checks if interface works 
         /// </summary>

@@ -2,12 +2,16 @@
  * Author: Zachery Brunner
  * Class: CandlehearthCoffeeTests.cs
  * Purpose: Test the CandlehearthCoffee.cs class in the Data library
+ * Date Modified: 10/5/2020
+ * Modifier: Rana Chevuru
  */
 using Xunit;
 
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Drinks;
 using BleakwindBuffet.Data.Enums;
+using System.ComponentModel;
+
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
@@ -16,6 +20,92 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     /// </summary>
     public class CandlehearthCoffeeTests {
 
+        /// <summary>
+        /// Checks if the Ice property is changed 
+        /// </summary>
+        [Fact]
+        public void ChangingIceNotifiesIceProperty()
+        {
+            var chc = new CandlehearthCoffee();
+
+            Assert.PropertyChanged(chc, "Ice", () =>
+            {
+                chc.Ice = true;
+            });
+
+            Assert.PropertyChanged(chc, "Ice", () =>
+            {
+                chc.Ice = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if the Decaf property is changed 
+        /// </summary>
+        [Fact]
+        public void ChangingDecafNotifiesDecafProperty()
+        {
+            var chc = new CandlehearthCoffee();
+
+            Assert.PropertyChanged(chc, "Decaf", () =>
+            {
+                chc.Decaf = true;
+            });
+
+            Assert.PropertyChanged(chc, "Decaf", () =>
+            {
+                chc.Decaf = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if the RoomForCream property is changed 
+        /// </summary>
+        [Fact]
+        public void ChangingRoomForCreamNotifiesRoomForCreamProperty()
+        {
+            var chc = new CandlehearthCoffee();
+
+            Assert.PropertyChanged(chc, "RoomForCream", () =>
+            {
+                chc.RoomForCream = true;
+            });
+
+            Assert.PropertyChanged(chc, "RoomForCream", () =>
+            {
+                chc.RoomForCream = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if the Size property is changed 
+        /// </summary>
+        /// <param name="size">Size of cotainer</param>
+        [Theory]
+        [InlineData(Size.Large)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Small)]
+
+        public void ChangingSizeNotifiesSizeProperty(Size size)
+        {
+            var chc = new CandlehearthCoffee();
+
+            Assert.PropertyChanged(chc, "Size", () =>
+            {
+                chc.Size = size;
+            });
+        }
+
+        /// <summary>
+        /// Checks if INotifyPropertyChanged interface works 
+        /// </summary>
+        [Fact]
+        public void CheckINotifyPropertyChanged()
+        {
+            CandlehearthCoffee chc = new CandlehearthCoffee();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(chc);
+        }
+        
         /// <summary>
         /// Checks if interface works 
         /// </summary>

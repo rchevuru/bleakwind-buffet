@@ -2,6 +2,8 @@
  * Author: Zachery Brunner
  * Class: SailorSodaTests.cs
  * Purpose: Test the SailorSoda.cs class in the Data library
+ * Date Modified: 10/5/2020
+ * Modifier: Rana Chevuru
  */
 using System;
 
@@ -10,6 +12,7 @@ using Xunit;
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Drinks; 
 using BleakwindBuffet.Data.Enums;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
@@ -18,6 +21,72 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     /// </summary>
     public class SailorSodaTests
     {
+        /// <summary>
+        /// Checks if the Flavor property is changed 
+        /// </summary>
+        [Theory]
+        [InlineData(SodaFlavor.Blackberry)]
+        [InlineData(SodaFlavor.Cherry)]
+        [InlineData(SodaFlavor.Grapefruit)]
+        [InlineData(SodaFlavor.Lemon)]
+        [InlineData(SodaFlavor.Peach)]
+        [InlineData(SodaFlavor.Watermelon)]
+        public void ChangingFlavorNotifiesFlavorProperty(SodaFlavor flavor)
+        {
+            var ss = new SailorSoda();
+
+            Assert.PropertyChanged(ss, "Flavor", () =>
+            {
+                ss.Flavor = flavor;
+            });
+        }
+
+        /// <summary>
+        /// Checks if the Ice property is changed 
+        /// </summary>
+        [Fact]
+        public void ChangingIceNotifiesIceProperty()
+        {
+            var ss = new SailorSoda();
+
+            Assert.PropertyChanged(ss, "Ice", () =>
+            {
+                ss.Ice = true;
+            });
+
+            Assert.PropertyChanged(ss, "Ice", () =>
+            {
+                ss.Ice = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if the Size property is changed 
+        /// </summary>
+        /// <param name="size">Size of cotainer</param>
+        [Theory]
+        [InlineData(Size.Large)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Small)]
+
+        public void ChangingSizeNotifiesSizeProperty(Size size)
+        {
+            var ss = new SailorSoda();
+
+            Assert.PropertyChanged(ss, "Size", () =>
+            {
+                ss.Size = size;
+            });
+        }
+        /// <summary>
+        /// Checks if INotifyPropertyChanged interface works 
+        /// </summary>
+        [Fact]
+        public void CheckINotifyPropertyChanged()
+        {
+            SailorSoda ss = new SailorSoda();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(ss);
+        }
         /// <summary>
         /// Checks if interface works 
         /// </summary>

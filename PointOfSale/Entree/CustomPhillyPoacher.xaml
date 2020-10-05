@@ -13,19 +13,19 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <CheckBox Grid.Row ="0" FontSize="20">
+        <CheckBox IsChecked="{Binding Path= Sirloin}" Grid.Row ="0" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2" ScaleY="2"/>
             </CheckBox.LayoutTransform>
             Sirloin
         </CheckBox>
-        <CheckBox Grid.Row ="1" FontSize="20">
+        <CheckBox IsChecked="{Binding Path= Onopn}" Grid.Row ="1" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2" ScaleY="2"/>
             </CheckBox.LayoutTransform>
             Onion
         </CheckBox>
-        <CheckBox Grid.Row ="2" FontSize="20">
+        <CheckBox IsChecked="{Binding Path= Roll}" Grid.Row ="2" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2" ScaleY="2"/>
             </CheckBox.LayoutTransform>

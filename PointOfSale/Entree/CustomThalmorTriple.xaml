@@ -20,25 +20,25 @@
             <RowDefinition/>
             <RowDefinition/>
             </Grid.RowDefinitions>
-        <CheckBox Grid.Row ="0" FontSize="20">
+        <CheckBox IsChecked="{Binding Path= Bun}" Grid.Row ="0" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="1.7" ScaleY="1.7"/>
             </CheckBox.LayoutTransform>
             Bun
         </CheckBox>
-        <CheckBox Grid.Row ="1" FontSize="20">
+        <CheckBox IsChecked="{Binding Path= Ketchup}" Grid.Row ="1" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="1.7" ScaleY="1.7"/>
             </CheckBox.LayoutTransform>
             Ketchup
         </CheckBox>
-        <CheckBox Grid.Row ="2" FontSize="20">
+        <CheckBox IsChecked="{Binding Path= Mustard}" Grid.Row ="2" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="1.7" ScaleY="1.7"/>
             </CheckBox.LayoutTransform>
             Mustard
         </CheckBox>
-        <CheckBox Grid.Row="3" FontSize="20">
+        <CheckBox IsChecked="{Binding Path= Pickle}" Grid.Row="3" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="1.7" ScaleY="1.7"/>
             </CheckBox.LayoutTransform>

@@ -11,7 +11,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <CheckBox Grid.Row ="0" FontSize="20">
+        <CheckBox IsChecked="{Binding Path=Ice}" Grid.Row ="0" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="8" ScaleY="8"/>
             </CheckBox.LayoutTransform>

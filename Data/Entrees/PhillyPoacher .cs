@@ -2,18 +2,21 @@
  * Author: Rana Chevuru 
  * Class name: PhillyPoacher .cs
  * Purpose: Class used to show price and calories for entrees using a base and interface
+ * Date Modified: 10/5/2020
  */
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel; 
 
 namespace BleakwindBuffet.Data.Entrees
 {
     /// <summary>
     /// Class used to show price and calories for entrees using a base and interface
     /// </summary>
-    public class PhillyPoacher : Entree, IOrderItem
+    public class PhillyPoacher : Entree, IOrderItem, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// Private varible that will called for Sirloin 
         /// </summary>
@@ -45,7 +48,11 @@ namespace BleakwindBuffet.Data.Entrees
         public bool Sirloin
         {
             get => sirloin;
-            set => sirloin = value;
+            set
+            {
+                sirloin = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sirloin"));
+            }
         }
 
         /// <summary>
@@ -54,7 +61,11 @@ namespace BleakwindBuffet.Data.Entrees
         public bool Onion
         {
             get => onion;
-            set => onion = value;
+            set
+            {
+                onion = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Onion"));
+            }
         }
 
         /// <summary>
@@ -63,7 +74,11 @@ namespace BleakwindBuffet.Data.Entrees
         public bool Roll
         {
             get => roll;
-            set => roll = value;
+        set
+        {
+            roll = value;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Roll"));
+        }
         }
 
         /// <summary>

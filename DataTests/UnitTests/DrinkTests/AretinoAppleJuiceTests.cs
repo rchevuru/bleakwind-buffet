@@ -2,12 +2,15 @@
  * Author: Zachery Brunner
  * Class: AretinoAppleJuiceTests.cs
  * Purpose: Test the AretinoAppleJuice.cs class in the Data library
+ * Date Modified: 10/5/2020
+ * Modifier: Rana Chevuru
  */
 using Xunit;
 
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Drinks;
 using BleakwindBuffet.Data.Enums;
+using System.ComponentModel; 
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
@@ -16,6 +19,52 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     /// </summary>
     public class AretinoAppleJuiceTests
     {
+        /// <summary>
+        /// Checks if the Ice property is changed 
+        /// </summary>
+        [Fact]
+        public void ChangingIceNotifiesIceProperty()
+        {
+            var aj = new AretinoAppleJuice();
+
+            Assert.PropertyChanged(aj, "Ice", () =>
+            {
+                aj.Ice = true;
+            });
+
+            Assert.PropertyChanged(aj, "Ice", () =>
+            {
+                aj.Ice = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if the Size property is changed 
+        /// </summary>
+        /// <param name="size">Size of cotainer</param>
+        [Theory]
+        [InlineData(Size.Large)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Small)]
+
+        public void ChangingSizeNotifiesSizeProperty(Size size)
+        {
+            var aj = new AretinoAppleJuice();
+
+            Assert.PropertyChanged(aj, "Size", () =>
+            {
+                aj.Size = size;
+            });
+        }
+        /// <summary>
+        /// Checks if INotifyPropertyChanged interface works 
+        /// </summary>
+        [Fact]
+        public void CheckINotifyPropertyChanged()
+        {
+            AretinoAppleJuice aj = new AretinoAppleJuice();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(aj);
+        }
         /// <summary>
         /// Checks if interface works 
         /// </summary>

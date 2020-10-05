@@ -2,12 +2,14 @@
  * Author: Rana Chevuru
  * Class: WarriorWaterTests.cs
  * Purpose: Test the WarriorWater.cs class in the Data library
+ * Date Modified: 10/5/2020
  */
 using Xunit;
 
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Drinks;
 using BleakwindBuffet.Data.Enums;
+using System.ComponentModel; 
 
 namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
 {
@@ -16,6 +18,72 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
     /// </summary>
     public class WarriorWaterTests
     {
+        /// <summary>
+        /// Checks if the Ice property is changed 
+        /// </summary>
+        [Fact]
+        public void ChangingIceNotifiesIceProperty()
+        {
+            var ww = new WarriorWater();
+
+            Assert.PropertyChanged(ww, "Ice", () =>
+            {
+                ww.Ice = true;
+            });
+
+            Assert.PropertyChanged(ww, "Ice", () =>
+            {
+                ww.Ice = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if the Lemon property is changed 
+        /// </summary>
+        [Fact]
+        public void ChangingLemonNotifiesLemonProperty()
+        {
+            var ww = new WarriorWater();
+
+            Assert.PropertyChanged(ww, "Lemon", () =>
+            {
+                ww.Lemon = true;
+            });
+
+            Assert.PropertyChanged(ww, "Lemon", () =>
+            {
+                ww.Lemon = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if the Size property is changed 
+        /// </summary>
+        /// <param name="size">Size of cotainer</param>
+        [Theory]
+        [InlineData(Size.Large)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Small)]
+
+        public void ChangingSizeNotifiesSizeProperty(Size size)
+        {
+            var ww = new WarriorWater();
+
+            Assert.PropertyChanged(ww, "Size", () =>
+            {
+                ww.Size = size;
+            });
+        }
+
+        /// <summary>
+        /// Checks if INotifyPropertyChanged interface works 
+        /// </summary>
+        [Fact]
+        public void CheckINotifyPropertyChanged()
+        {
+            WarriorWater ww = new WarriorWater();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(ww);
+        }
         /// <summary>
         /// Checks if interface works 
         /// </summary>

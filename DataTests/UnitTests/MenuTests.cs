@@ -2,6 +2,7 @@
  * Author: Rana Chevuru
  * Class: MenuTests.cs
  * Purpose: Test the Menu.cs class in the Data library
+ * Date Modified: 10/5/2020
  */
 using System;
 using System.Collections.Generic;
@@ -113,11 +114,12 @@ namespace BleakwindBuffet.DataTests.UnitTests
         public void CheckMenuClassForFullMenu()
         {
             int numSize = Enum.GetValues(typeof(Size)).Length;
+            //int numFlavor = Enum.GetValues(typeof(SodaFlavor)).Length;
             int numEntree = 7;
             int numSides = 4;
             int numDrinks = 5;
 
-            int numMenuItems = (numSides * numSize) + (numDrinks * numSize) + numEntree;
+            int numMenuItems = (numSides * numSize) /*+ (numFlavor * numSize)*/ + (numDrinks * numSize) + numEntree;
 
             IEnumerable<IOrderItem> FM = Menu.FullMenu();
             List<IOrderItem> MenuItems = (List<IOrderItem>)FM;
@@ -152,40 +154,14 @@ namespace BleakwindBuffet.DataTests.UnitTests
              item => {
                   Assert.IsType<SailorSoda>(item);
                   Assert.Equal(Size.Small, ((SailorSoda)item).Size);
-                  Assert.Equal(SodaFlavor.Blackberry, ((SailorSoda)item).Flavor);
+                 // Assert.Equal(SodaFlavor.Blackberry, ((SailorSoda)item).Flavor);
               },
-
-             item => {
-                    Assert.IsType<SailorSoda>(item);
-                    Assert.Equal(Size.Small, ((SailorSoda)item).Size);
-                    Assert.Equal(SodaFlavor.Cherry, ((SailorSoda)item).Flavor);
-                },
-             item => {
-                   Assert.IsType<SailorSoda>(item);
-                   Assert.Equal(Size.Small, ((SailorSoda)item).Size);
-                   Assert.Equal(SodaFlavor.Grapefruit, ((SailorSoda)item).Flavor);
-               },
-             item => {
-                   Assert.IsType<SailorSoda>(item);
-                   Assert.Equal(Size.Small, ((SailorSoda)item).Size);
-                   Assert.Equal(SodaFlavor.Lemon, ((SailorSoda)item).Flavor);
-               },
-             item => {
-                   Assert.IsType<SailorSoda>(item);
-                   Assert.Equal(Size.Small, ((SailorSoda)item).Size);
-                   Assert.Equal(SodaFlavor.Peach, ((SailorSoda)item).Flavor);
-               },
-             item => {
-                   Assert.IsType<SailorSoda>(item);
-                   Assert.Equal(Size.Small, ((SailorSoda)item).Size);
-                   Assert.Equal(SodaFlavor.Watermelon, ((SailorSoda)item).Flavor);
-               },
 
 
              item => {
                 Assert.IsType<AretinoAppleJuice>(item);
-                Assert.Equal(Size.Medium, ((AretinoAppleJuice)item).Size);
-              },
+                 Assert.Equal(Size.Medium, ((AretinoAppleJuice)item).Size);
+             },
              item => {
                  Assert.IsType<CandlehearthCoffee>(item);
                  Assert.Equal(Size.Medium, ((CandlehearthCoffee)item).Size);
@@ -201,34 +177,9 @@ namespace BleakwindBuffet.DataTests.UnitTests
              item => {
                   Assert.IsType<SailorSoda>(item);
                   Assert.Equal(Size.Medium, ((SailorSoda)item).Size);
-                  Assert.Equal(SodaFlavor.Blackberry, ((SailorSoda)item).Flavor);
-              },
-              item => {
-                   Assert.IsType<SailorSoda>(item);
-                   Assert.Equal(Size.Medium, ((SailorSoda)item).Size);
-                   Assert.Equal(SodaFlavor.Cherry, ((SailorSoda)item).Flavor);
-               },
-              item => {
-                   Assert.IsType<SailorSoda>(item);
-                   Assert.Equal(Size.Medium, ((SailorSoda)item).Size);
-                   Assert.Equal(SodaFlavor.Grapefruit, ((SailorSoda)item).Flavor);
-               },
-              item => {
-                   Assert.IsType<SailorSoda>(item);
-                   Assert.Equal(Size.Medium, ((SailorSoda)item).Size);
-                   Assert.Equal(SodaFlavor.Lemon, ((SailorSoda)item).Flavor);
-               },
-              item => {
-                   Assert.IsType<SailorSoda>(item);
-                   Assert.Equal(Size.Medium, ((SailorSoda)item).Size);
-                   Assert.Equal(SodaFlavor.Peach, ((SailorSoda)item).Flavor);
-               },
-              item => {
-                   Assert.IsType<SailorSoda>(item);
-                   Assert.Equal(Size.Medium, ((SailorSoda)item).Size);
-                   Assert.Equal(SodaFlavor.Watermelon, ((SailorSoda)item).Flavor);
-               },
-
+                 //Assert.Equal(SodaFlavor.Blackberry, ((SailorSoda)item).Flavor);
+             },
+              
 
               item => {
                 Assert.IsType<AretinoAppleJuice>(item);
@@ -253,33 +204,9 @@ namespace BleakwindBuffet.DataTests.UnitTests
               item => {
                    Assert.IsType<SailorSoda>(item);
                    Assert.Equal(Size.Large, ((SailorSoda)item).Size);
-                   Assert.Equal(SodaFlavor.Blackberry, ((SailorSoda)item).Flavor);
-               },
-              item => {
-                   Assert.IsType<SailorSoda>(item);
-                   Assert.Equal(Size.Large, ((SailorSoda)item).Size);
-                   Assert.Equal(SodaFlavor.Cherry, ((SailorSoda)item).Flavor);
-               },
-              item => {
-                   Assert.IsType<SailorSoda>(item);
-                   Assert.Equal(Size.Large, ((SailorSoda)item).Size);
-                   Assert.Equal(SodaFlavor.Grapefruit, ((SailorSoda)item).Flavor);
-               },
-              item => {
-                   Assert.IsType<SailorSoda>(item);
-                   Assert.Equal(Size.Large, ((SailorSoda)item).Size);
-                   Assert.Equal(SodaFlavor.Lemon, ((SailorSoda)item).Flavor);
-               },
-              item => {
-                   Assert.IsType<SailorSoda>(item);
-                   Assert.Equal(Size.Large, ((SailorSoda)item).Size);
-                   Assert.Equal(SodaFlavor.Peach, ((SailorSoda)item).Flavor);
-               },
-              item => {
-                   Assert.IsType<SailorSoda>(item);
-                   Assert.Equal(Size.Large, ((SailorSoda)item).Size);
-                   Assert.Equal(SodaFlavor.Watermelon, ((SailorSoda)item).Flavor);
-               }
+                  // Assert.Equal(SodaFlavor.Blackberry, ((SailorSoda)item).Flavor);
+              }
+              
             ) ; 
         }
 

@@ -2,12 +2,15 @@
  * Author: Zachery Brunner
  * Class: DragonbornWaffleFriesTests.cs
  * Purpose: Test the DragonbornWaffleFries.cs class in the Data library
+ * Date Modified: 10/5/2020
+ * Modifier: Rana Chevuru
  */
 using Xunit;
 
 using BleakwindBuffet.Data;
 using BleakwindBuffet.Data.Enums;
 using BleakwindBuffet.Data.Sides;
+using System.ComponentModel; 
 
 namespace BleakwindBuffet.DataTests.UnitTests.SideTests
 {
@@ -16,6 +19,15 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
     /// </summary>
     public class DragonbornWaffleFriesTests
     {
+        /// <summary>
+        /// Checks if INotifyPropertyChanged interface works 
+        /// </summary>
+        [Fact]
+        public void CheckINotifyPropertyChanged()
+        {
+            DragonbornWaffleFries dwf = new DragonbornWaffleFries();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(dwf);
+        }
         /// <summary>
         /// Checks if interface works 
         /// </summary>

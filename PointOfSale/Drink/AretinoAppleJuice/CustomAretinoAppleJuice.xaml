@@ -11,12 +11,12 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <CheckBox Grid.Row ="0" FontSize="20">
+        <CheckBox IsChecked="{Binding Path=Ice}" Grid.Row ="0" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="8" ScaleY="8"/>
             </CheckBox.LayoutTransform>
             Ice
         </CheckBox>
-        <Button Grid.Row="5" FontSize="50" Click="switchToSizes" FontWeight ="Black">Back</Button>
+        <Button  Grid.Row="5" FontSize="50" Click="switchToSizes" FontWeight ="Black">Back</Button>
     </Grid>
 </UserControl>

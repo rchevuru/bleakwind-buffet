@@ -2,19 +2,22 @@
  * Author: Rana Chevuru 
  * Class name: MadOtarGrits.cs
  * Purpose: Class used to show price and calories with sizes for sides using a base and interface
+ * Date Modified: 10/5/2020
  */
 using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Sides
 {
     /// <summary>
     /// Class used to show price and calories with sizes for sides using a base and interface
     /// </summary>
-    public class MadOtarGrits : Side, IOrderItem
+    public class MadOtarGrits : Side, IOrderItem, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// varible to get size from enum
         /// </summary>
@@ -26,7 +29,11 @@ namespace BleakwindBuffet.Data.Sides
         public override Size Size
         {
             get => size;
-            set => size = value;
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+            }
         }
 
         /// <summary>

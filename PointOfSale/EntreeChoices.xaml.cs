@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data.Entrees;
 
 namespace PointOfSale
 {
@@ -40,6 +41,7 @@ namespace PointOfSale
         void switchToBriarheartBurgerChoices(object sender, RoutedEventArgs e)
         {
             var customize = new CustomBriarheartBurger();
+            customize.DataContext = new BriarheartBurger(); 
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(customize);
         }

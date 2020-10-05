@@ -2,11 +2,14 @@
  * Author: Zachery Brunner
  * Class: GardenOrcOmeletteTests.cs
  * Purpose: Test the GardenOrcOmelette.cs class in the Data library
+ * Date Modified: 10/5/2020
+ * Modifier: Rana Chevuru
  */
 using Xunit;
 
 using BleakwindBuffet.Data;
-using BleakwindBuffet.Data.Entrees; 
+using BleakwindBuffet.Data.Entrees;
+using System.ComponentModel; 
 
 namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
 {
@@ -15,6 +18,15 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
     /// </summary>
     public class GardenOrcOmeletteTests
     {
+        /// <summary>
+        /// Checks if INotifyPropertyChanged interface works 
+        /// </summary>
+        [Fact]
+        public void CheckINotifyPropertyChanged()
+        {
+            GardenOrcOmelette goo = new GardenOrcOmelette();
+            Assert.IsAssignableFrom<INotifyPropertyChanged>(goo);
+        }
         /// <summary>
         /// Checks if interface works 
         /// </summary>

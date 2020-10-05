@@ -14,25 +14,25 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <CheckBox Grid.Row ="0" FontSize="20">
+        <CheckBox IsChecked="{Binding Path= SausageLink}" Grid.Row ="0" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2" ScaleY="2"/>
             </CheckBox.LayoutTransform>
             Sausage Link
         </CheckBox>
-        <CheckBox Grid.Row ="1" FontSize="20">
+        <CheckBox IsChecked="{Binding Path= Egg}" Grid.Row ="1" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2" ScaleY="2"/>
             </CheckBox.LayoutTransform>
             Egg
         </CheckBox>
-        <CheckBox Grid.Row ="2" FontSize="20">
+        <CheckBox IsChecked="{Binding Path= HashBrown}" Grid.Row ="2" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2" ScaleY="2"/>
             </CheckBox.LayoutTransform>
             Hash Brown
         </CheckBox>
-        <CheckBox Grid.Row ="3" FontSize="20">
+        <CheckBox IsChecked="{Binding Path= Pancake}" Grid.Row ="3" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2" ScaleY="2"/>
             </CheckBox.LayoutTransform>

@@ -2,19 +2,23 @@
  * Author: Rana Chevuru 
  * Class name: AretinoAppleJuice.cs
  * Purpose: Class used to show price and calories with sizes for drinks using a base and interface
+ * Date Modified: 10/5/2020
  */
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using BleakwindBuffet.Data.Enums;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// Class used to show price and calories with sizes for drinks using a base and interface
     /// </summary>
-    public class AretinoAppleJuice : Drink, IOrderItem
+    public class AretinoAppleJuice : Drink, IOrderItem, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Private varible that will called for Ice 
         /// </summary>
@@ -31,7 +35,11 @@ namespace BleakwindBuffet.Data.Drinks
         public bool Ice
         {
             get => ice;
-            set => ice = value; 
+            set
+            {
+                ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+            }
         }
 
         /// <summary>
@@ -40,7 +48,11 @@ namespace BleakwindBuffet.Data.Drinks
         public override Size Size
         {
             get => size;
-            set => size = value; 
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+            }
         }
 
         /// <summary>

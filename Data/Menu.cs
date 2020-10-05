@@ -1,7 +1,8 @@
 ﻿/*
  * Author: Rana Chevuru 
  * Class name: Menu.cs
- * Purpose:  A class representing the items to be sold 
+ * Purpose:  A class representing the items to be sold
+ * Date Modified: 10/5/2020
  */
 using System;
 using System.Collections.Generic;
@@ -64,11 +65,12 @@ namespace BleakwindBuffet.Data
                 enumerable.Add(new AretinoAppleJuice() { Size = size });
                 enumerable.Add(new CandlehearthCoffee(){ Size = size });
                 enumerable.Add(new MarkarthMilk()      { Size = size });
-                enumerable.Add(new WarriorWater()      { Size = size }); 
-                foreach(SodaFlavor flavor in Enum.GetValues(typeof(SodaFlavor)))
+                enumerable.Add(new WarriorWater()      { Size = size });
+                enumerable.Add(new SailorSoda() { Size = size });
+                /*foreach (SodaFlavor flavor in Enum.GetValues(typeof(SodaFlavor)))
                 {
-                    enumerable.Add(new SailorSoda() { Size = size, Flavor = flavor });
-                }
+                    
+                }*/
             }
             return enumerable; 
         }
