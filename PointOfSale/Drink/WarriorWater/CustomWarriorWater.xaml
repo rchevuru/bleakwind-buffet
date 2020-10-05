@@ -12,13 +12,13 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <CheckBox Grid.Row ="0" FontSize="20">
+        <CheckBox IsChecked="{Binding Path=Ice}" Grid.Row ="0" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="4" ScaleY="4"/>
             </CheckBox.LayoutTransform>
             Ice
         </CheckBox>
-        <CheckBox Grid.Row ="1" FontSize="20">
+        <CheckBox IsChecked="{Binding Path=Lemon}" Grid.Row ="1" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="4" ScaleY="4"/>
             </CheckBox.LayoutTransform>

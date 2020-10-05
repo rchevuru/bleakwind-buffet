@@ -44,37 +44,37 @@
             </CheckBox.LayoutTransform>
             Pickle
         </CheckBox>
-        <CheckBox Grid.Row="4" FontSize="20">
+        <CheckBox IsChecked="{Binding Path= Cheese}" Grid.Row="4" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="1.7" ScaleY="1.7"/>
             </CheckBox.LayoutTransform>
             Cheese
         </CheckBox>
-        <CheckBox Grid.Row="5" FontSize="20">
+        <CheckBox IsChecked="{Binding Path= Tomato}" Grid.Row="5" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="1.7" ScaleY="1.7"/>
             </CheckBox.LayoutTransform>
             Tomato
         </CheckBox>
-        <CheckBox Grid.Row="6" FontSize="20">
+        <CheckBox IsChecked="{Binding Path= Lettuce}" Grid.Row="6" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="1.7" ScaleY="1.7"/>
             </CheckBox.LayoutTransform>
             Lettuce
         </CheckBox>
-        <CheckBox Grid.Row="7" FontSize="20">
+        <CheckBox IsChecked="{Binding Path= Mayo}" Grid.Row="7" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="1.7" ScaleY="1.7"/>
             </CheckBox.LayoutTransform>
             Mayo
         </CheckBox>
-        <CheckBox Grid.Row="8" FontSize="20">
+        <CheckBox IsChecked="{Binding Path= Bacon}" Grid.Row="8" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="1.7" ScaleY="1.7"/>
             </CheckBox.LayoutTransform>
             Bacon
         </CheckBox>
-        <CheckBox Grid.Row="9" FontSize="20">
+        <CheckBox IsChecked="{Binding Path= Egg}" Grid.Row="9" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="1.7" ScaleY="1.5"/>
             </CheckBox.LayoutTransform>

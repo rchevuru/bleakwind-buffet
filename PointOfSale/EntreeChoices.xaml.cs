@@ -2,6 +2,7 @@
  * Author: Rana Chevuru
  * Class:EntreeChoices.xaml.cs
  * Purpose: Displays all entree choices  
+ * Date Modified: 10/5/2020
  */
 using System;
 using System.Collections.Generic;
@@ -54,6 +55,7 @@ namespace PointOfSale
         void switchToDoubleDraugrChoices(object sender, RoutedEventArgs e)
         {
             var customize = new CustomDoubleDraugr();
+            customize.DataContext = new DoubleDraugr();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(customize);
         }
@@ -66,6 +68,7 @@ namespace PointOfSale
         void switchToGardenOrcOmelette(object sender, RoutedEventArgs e)
         {
             var customize = new GardenOrcOmelette();
+            customize.DataContext = new GardenOrcOmelette();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(customize);
         }
@@ -78,6 +81,7 @@ namespace PointOfSale
         void switchToPhillyPoacher(object sender, RoutedEventArgs e)
         {
             var customize = new CustomPhillyPoacher();
+            customize.DataContext = new PhillyPoacher();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(customize);
         }
@@ -90,6 +94,7 @@ namespace PointOfSale
         void switchToSokehouseSkeleton(object sender, RoutedEventArgs e)
         {
             var customize = new CustomSokehouseSkeleton();
+            customize.DataContext = new SmokehouseSkeleton();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(customize);
         }
@@ -102,6 +107,7 @@ namespace PointOfSale
         void switchToThalmorTriple(object sender, RoutedEventArgs e)
         {
             var customize = new CustomThalmorTriple();
+            customize.DataContext = new ThalmorTriple();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(customize);
         }

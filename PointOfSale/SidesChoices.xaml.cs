@@ -2,6 +2,7 @@
  * Author: Rana Chevuru
  * Class:SidesChoices.xaml.cs  
  * Purpose: Displays the side options
+ * Date Modified: 10/5/2020
  */
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data.Sides; 
 
 namespace PointOfSale
 {
@@ -40,6 +42,7 @@ namespace PointOfSale
         void switchToSizesforSizesForDragonbornWaffleFries(object sender, RoutedEventArgs e)
         {
             var size = new SizesForDragonbornWaffleFries();
+            size.DataContext = new DragonbornWaffleFries();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(size);
         }
@@ -52,6 +55,7 @@ namespace PointOfSale
         void switchToSizesforSizesForFriedMiraak(object sender, RoutedEventArgs e)
         {
             var size = new SizesForFriedMiraak();
+            size.DataContext = new FriedMiraak();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(size);
         }
@@ -64,6 +68,7 @@ namespace PointOfSale
         void switchToSizesforSizesForMadOtarGrits(object sender, RoutedEventArgs e)
         {
             var size = new SizesForMadOtarGrits();
+            size.DataContext = new MadOtarGrits();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(size);
         }
@@ -76,6 +81,7 @@ namespace PointOfSale
         void switchToSizesforSizesForVokunSalad(object sender, RoutedEventArgs e)
         {
             var size = new SizesForVokunSalad();
+            size.DataContext = new VokunSalad();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(size);
         }

@@ -19,7 +19,7 @@
             </CheckBox.LayoutTransform>
             Sirloin
         </CheckBox>
-        <CheckBox IsChecked="{Binding Path= Onopn}" Grid.Row ="1" FontSize="20">
+        <CheckBox IsChecked="{Binding Path= Onion}" Grid.Row ="1" FontSize="20">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="2" ScaleY="2"/>
             </CheckBox.LayoutTransform>

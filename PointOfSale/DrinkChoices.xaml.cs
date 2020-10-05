@@ -2,6 +2,7 @@
  * Author: Rana Chevuru
  * DrinkChoices.xaml.cs
  * Purpose: Displays all drink choices  
+ * Date Modified: 10/5/2020
  */
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data.Drinks; 
 
 namespace PointOfSale
 {
@@ -41,6 +43,7 @@ namespace PointOfSale
         void switchToSizesforSizesForAretinoAppleJuice(object sender, RoutedEventArgs e)
         {
             var size = new SizesForAppleJuice();
+            size.DataContext = new AretinoAppleJuice();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(size);
         }
@@ -53,6 +56,7 @@ namespace PointOfSale
         void switchToSizesforSizesForCandlehearthCoffee(object sender, RoutedEventArgs e)
         {
             var size = new SizesForCandlehearthCoffee();
+            size.DataContext = new CandlehearthCoffee();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(size);
         }
@@ -65,6 +69,7 @@ namespace PointOfSale
         void switchToSizesforSizesForMarkarthMilk(object sender, RoutedEventArgs e)
         {
             var size = new SizesMarkarthMilk();
+            size.DataContext = new MarkarthMilk();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(size);
         }
@@ -77,6 +82,7 @@ namespace PointOfSale
         void switchToSizesforFlavorsForSailorSodak(object sender, RoutedEventArgs e)
         {
             var flavor = new FlavorSailorSoda();
+            flavor.DataContext = new SailorSoda();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(flavor);
         }
@@ -89,6 +95,7 @@ namespace PointOfSale
         void switchToSizesforSizesForWarriorWater(object sender, RoutedEventArgs e)
         {
             var size = new SizesWarriorWater();
+            size.DataContext = new WarriorWater();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(size);
         }
