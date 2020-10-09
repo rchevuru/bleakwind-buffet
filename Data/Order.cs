@@ -8,7 +8,7 @@ using System.Collections;
 
 namespace BleakwindBuffet.Data
 {
-    class Order : /*INotifyCollectionChanged,*/  INotifyPropertyChanged
+    public class Order : /*INotifyCollectionChanged,*/  INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
        // public event NotifyCollectionChangedEventHandler CollectionChanged;

@@ -10,7 +10,7 @@ using BleakwindBuffet.Data.Sides;
 
 namespace BleakwindBuffet.Data
 {
-    class Combo : ObservableCollection<IOrderItem>, INotifyPropertyChanged; 
+    class Combo : ObservableCollection<IOrderItem>, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         uint numTotalCal = 0;

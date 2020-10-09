@@ -11,12 +11,17 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <Border x:Name="summeryOrder" Grid.Column="1">
             <local:Order></local:Order>
         </Border>
         <Border x:Name= "menuChoice" Grid.Column="0">
             <local:Menu></local:Menu>
         </Border>
-
+        <Border Grid.Row="0">
+            
+        </Border>
     </Grid>
 </UserControl>
