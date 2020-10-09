@@ -227,7 +227,8 @@ namespace BleakwindBuffet.Data.Entrees
                 if (!Lettuce) instructions.Add("Hold lettuce");
                 if (!Mayo)    instructions.Add("Hold mayo");
                 if (!Bacon)   instructions.Add("Hold bacon");
-                if (!Egg)     instructions.Add("Hold egg"); 
+                if (!Egg)     instructions.Add("Hold egg");
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
                 return instructions;
             }
         }

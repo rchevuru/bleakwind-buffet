@@ -113,6 +113,7 @@ namespace BleakwindBuffet.Data.Entrees
                 if (!Egg) instructions.Add("Hold egg");
                 if (!HashBrowns) instructions.Add("Hold hash browns");
                 if (!Pancake) instructions.Add("Hold pancakes");
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
                 return instructions;
             }
         }

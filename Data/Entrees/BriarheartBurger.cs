@@ -127,6 +127,7 @@ namespace BleakwindBuffet.Data.Entrees
                 if (!Mustard) instructions.Add("Hold mustard");
                 if (!Pickle)  instructions.Add("Hold pickle");
                 if (!Cheese) instructions.Add("Hold cheese");
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
                 return instructions; 
             }
         }

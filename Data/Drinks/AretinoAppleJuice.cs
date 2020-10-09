@@ -105,7 +105,9 @@ namespace BleakwindBuffet.Data.Drinks
             {
                 List<string> instructions = new List<string>();
                 if (Ice) instructions.Add("Add ice");
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
                 return instructions;
+                
             }
         }
 

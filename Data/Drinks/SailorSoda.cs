@@ -123,6 +123,7 @@ namespace BleakwindBuffet.Data.Drinks
             {
                 List<string> instructions = new List<string>();
                 if (!Ice) instructions.Add("Hold ice");
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
                 return instructions; 
             }
         }

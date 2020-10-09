@@ -143,6 +143,7 @@ namespace BleakwindBuffet.Data.Drinks
                 List<string> instructions = new List<string>();
                 if (Ice) instructions.Add("Add ice"); 
                 if (RoomForCream) instructions.Add("Add cream");
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
                 return instructions;
             }
         }
