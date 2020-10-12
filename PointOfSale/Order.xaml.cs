@@ -31,5 +31,10 @@ namespace PointOfSale
         {
             InitializeComponent();
         }
+
+        public void AddToOrder(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

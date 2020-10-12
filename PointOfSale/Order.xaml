@@ -12,6 +12,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
+            <RowDefinition/>
             <!--<RowDefinition Height="60"/> -->
             <!--<RowDefinition Height="60"/> -->
             <!---<RowDefinition Height="60"/>-->
@@ -29,6 +30,7 @@
             <TextBlock Grid.Row ="3" DockPanel.Dock="Bottom" FontWeight="Black" TextAlignment="Right" FontSize="18">
             Subtotal:
             </TextBlock>
-        </DockPanel> 
+        </DockPanel>
+        <Button Grid.Row="2" FontWeight="Black" FontSize="20" Click="AddToOrder"> Add to Order</Button>
    </Grid>
 </UserControl>
