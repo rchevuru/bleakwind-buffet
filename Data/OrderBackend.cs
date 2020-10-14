@@ -8,14 +8,15 @@ using System.Collections;
 
 namespace BleakwindBuffet.Data
 {
-    public class Order : /*INotifyCollectionChanged,*/  INotifyPropertyChanged
+    public class OrderBackend : /*INotifyCollectionChanged,*/  INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
        // public event NotifyCollectionChangedEventHandler CollectionChanged;
         List<IOrderItem> list = new List<IOrderItem>(); 
         private double salesTaxRate = 0.12;
         private double subtotal = 0;
-        private uint cal = 0; 
+        private uint cal = 0;
+        private int count = 0; 
 
         public double SalesTaxRate
         {
@@ -33,7 +34,20 @@ namespace BleakwindBuffet.Data
                 return subtotal; 
             }
         }
-     
+        
+        public int CountOrderNum
+        {
+           get { return count; } 
+           set
+            {
+                if(count != value)
+                {
+                    count = value; 
+                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Count"));
+                }
+                
+            }
+        }
 
         private void calculateCal()
         {

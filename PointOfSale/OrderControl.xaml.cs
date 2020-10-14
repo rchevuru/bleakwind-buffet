@@ -30,7 +30,7 @@ namespace PointOfSale
         public OrderControl()
         {
             InitializeComponent();
-            DataContext = new BleakwindBuffet.Data.Order(); 
+            DataContext = new BleakwindBuffet.Data.OrderBackend(); 
         }
 
         /// <summary>

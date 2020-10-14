@@ -20,7 +20,7 @@
         <Button Grid.Row ="0" Name ="EntreeButt" Click ="SwitchtoMenuOptiontoEntree" Height="120" FontWeight="Black" FontSize="20" >Entrees</Button>
         <Button Grid.Row ="1" Name ="DrinkButt" Click="SwitchtoMenuOptionToDrink" Height="120" FontWeight="Black" FontSize="20">Drinks</Button>
         <Button Grid.Row ="2" Name ="SidesButt" Click="SwitchtoMenuOptionToSide" Height="120" FontWeight="Black" FontSize="20">Sides</Button>
-        <Button Grid.Row ="3" FontWeight="Black"  FontSize ="18" >New Order</Button>
-        <Button Grid.Row ="4" FontWeight="Black" FontSize="18">Cancel Order</Button>
+        <Button Grid.Row ="3" FontWeight="Black"  FontSize ="18" Click="NewOrder_Click" >New Order</Button>
+        <Button Grid.Row ="4" FontWeight="Black" FontSize="18" Click="Cancel_Click">Cancel Order</Button>
     </Grid>
 </UserControl>
