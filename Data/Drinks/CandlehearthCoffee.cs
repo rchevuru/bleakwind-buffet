@@ -148,6 +148,11 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        public string Name
+        {
+            get => ToString();
+        }
+
         /// <summary>
         /// Prints the size,name, and if it's decafed
         /// </summary>

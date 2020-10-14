@@ -110,6 +110,11 @@ namespace BleakwindBuffet.Data.Drinks
             }
         }
 
+        public string Name
+        {
+            get => ToString();
+        }
+
         /// <summary>
         /// Prints the size and name
         /// </summary>

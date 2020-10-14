@@ -119,7 +119,7 @@ namespace BleakwindBuffet.Data.Drinks
     /// </summary>
     /// <return>the Spcial instruction for chef</return>
     public override List<string> SpecialInstructions
-        {
+    {
             get
             {
                 List<string> instructions = new List<string>();
@@ -128,6 +128,11 @@ namespace BleakwindBuffet.Data.Drinks
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
                 return instructions;
             }
+    }
+
+        public string Name
+        {
+            get => ToString();
         }
 
         /// <summary>

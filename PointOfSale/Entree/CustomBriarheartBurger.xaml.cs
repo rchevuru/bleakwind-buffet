@@ -41,6 +41,8 @@ namespace PointOfSale
            //DataContext = new BriarheartBurger(); 
         }
 
+
+
         /// <summary>
         /// Goes back to the other entree options 
         /// </summary>
@@ -51,7 +53,7 @@ namespace PointOfSale
             var choices = new EntreeChoices();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(choices);
-            ob.Add(((BriarheartBurger) DataContext)); 
+            ob.Add((BriarheartBurger)DataContext); 
         }
     }
 }

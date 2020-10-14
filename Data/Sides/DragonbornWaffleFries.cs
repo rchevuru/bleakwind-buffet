@@ -90,6 +90,11 @@ namespace BleakwindBuffet.Data.Sides
             }
         }
 
+        public string Name
+        {
+            get => ToString();
+        }
+
         /// <summary>
         /// Prints the size and name
         /// </summary>

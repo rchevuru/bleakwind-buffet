@@ -117,6 +117,11 @@ namespace BleakwindBuffet.Data.Entrees
                 return instructions;
             }
         }
+        public string Name
+        {
+            get => ToString();
+        }
+
 
         /// <summary>
         /// Prints the name
