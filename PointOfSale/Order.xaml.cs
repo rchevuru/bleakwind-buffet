@@ -44,7 +44,7 @@ namespace PointOfSale
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            OrderBackend cancelOrder = new OrderBackend();/Make this in Order.cs
+            OrderBackend cancelOrder = new OrderBackend();
         }
 
         private void OrderItemView_SelectionChanged(object sender, SelectionChangedEventArgs e)

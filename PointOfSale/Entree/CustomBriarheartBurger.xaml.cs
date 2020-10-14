@@ -51,7 +51,7 @@ namespace PointOfSale
             var choices = new EntreeChoices();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(choices);
-            ob.Add(this.bhb); 
+            ob.Add(((BriarheartBurger) DataContext)); 
         }
     }
 }
