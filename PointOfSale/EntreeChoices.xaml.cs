@@ -17,6 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BleakwindBuffet.Data.Entrees;
+using BleakwindBuffet.Data; 
 
 namespace PointOfSale
 {
@@ -26,6 +27,8 @@ namespace PointOfSale
     /// </summary>
     public partial class EntreeChoices : UserControl
     {
+        OrderBackend ob = new OrderBackend(); 
+
         /// <summary>
         ///  Initialize Component to make the buttons work 
         /// </summary>
@@ -41,8 +44,9 @@ namespace PointOfSale
         /// <param name="e">the code that runs the function upon press</param>
         void switchToBriarheartBurgerChoices(object sender, RoutedEventArgs e)
         {
-            var customize = new CustomBriarheartBurger();
-            customize.DataContext = new BriarheartBurger(); 
+            BriarheartBurger briarheartBurger = new BriarheartBurger();
+            var customize = new CustomBriarheartBurger(ob,  briarheartBurger);
+           // customize.DataContext = new BriarheartBurger(); 
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(customize);
         }

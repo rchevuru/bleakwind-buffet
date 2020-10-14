@@ -16,6 +16,8 @@
             <RowDefinition />
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+            
 
             <RowDefinition/>
             <!--<RowDefinition Height="60"/> -->
@@ -43,6 +45,7 @@
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding Path=SpecialInstructions}" />
+                                    <!--<Button>Remove from order</Button> -->
                                 </DataTemplate>
                             </ListView.ItemTemplate>
 
@@ -55,8 +58,8 @@
         <TextBlock Grid.Column ="1" Grid.Row ="2" FontWeight="Black" TextAlignment="Right" FontSize="18" Text="{Binding Path=Tax}" >Tax</TextBlock>
         <TextBlock Grid.Column ="1" Grid.Row ="1" DockPanel.Dock="Bottom" FontWeight="Black" TextAlignment="Right" FontSize="18" Text="{Binding  Path=Subtotal}">Subtotal</TextBlock>
         <TextBlock Grid.Column ="1" Grid.Row ="3" FontWeight="Black" TextAlignment="Right" FontSize="18" Text="{Binding Path=Total}"> Total</TextBlock>
-        <Button Grid.Row="4" FontWeight="Black" FontSize="20" Click="AddToOrder" Grid.ColumnSpan="2">Add to Order</Button>
-
+        <Button Grid.Row ="3" FontWeight="Black"  FontSize ="18" Click="NewOrder_Click" Grid.ColumnSpan="2" Margin="0,64,0,64" Grid.RowSpan="3" >New Order</Button>
+        <Button Grid.Row ="5" FontWeight="Black" FontSize="18" Click="Cancel_Click" Grid.ColumnSpan="2">Cancel Order</Button>
 
     </Grid>
 </UserControl>

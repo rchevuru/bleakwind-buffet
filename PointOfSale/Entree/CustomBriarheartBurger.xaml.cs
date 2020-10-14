@@ -27,13 +27,17 @@ namespace PointOfSale
     public partial class CustomBriarheartBurger : UserControl
     {
         private OrderBackend ob;
+        BriarheartBurger bhb; 
         //CustomBriarheartBurger bhb = new CustomBriarheartBurger();
         /// <summary>
         ///  Initialize Component to make the buttons work
         /// </summary>
-        public CustomBriarheartBurger()
+        public CustomBriarheartBurger(OrderBackend backend, BriarheartBurger briarheartBurger)
         {
             InitializeComponent();
+            ob = backend;
+            bhb = briarheartBurger;
+            DataContext = briarheartBurger; 
            //DataContext = new BriarheartBurger(); 
         }
 
@@ -47,6 +51,7 @@ namespace PointOfSale
             var choices = new EntreeChoices();
             var orderControl = this.FindAncestor<OrderControl>();
             orderControl.SwitchMenuOrderScreen(choices);
+            ob.Add(this.bhb); 
         }
     }
 }

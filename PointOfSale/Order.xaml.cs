@@ -37,14 +37,15 @@ namespace PointOfSale
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public void AddToOrder(object sender, RoutedEventArgs e)
+        private void NewOrder_Click(object sender, RoutedEventArgs e)
         {
-            OrderBackend addOrder = new OrderBackend();
-            //How to add orderBackround like newOrder = Name for tostring? 
-           // newOrder = N; 
+            OrderBackend newOrder = new OrderBackend(); 
         }
 
-       
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            OrderBackend cancelOrder = new OrderBackend();/Make this in Order.cs
+        }
 
         private void OrderItemView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
